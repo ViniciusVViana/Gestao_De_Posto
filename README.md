@@ -1,4 +1,4 @@
-#Software para Gestão de um Comércio
+# Software para Gestão de um Comércio
 ## Equipes de no máximo 4 integrantes;
 ## Apresentação do projeto criado para a turma com as suas funcionalidades;
 ## Escolha do ramo de atividade fica a critério da equipe (Sapatos, padaria, mercado, roupas, esporte, eletro, ...);
