@@ -1,0 +1,5 @@
+void main(){
+
+    system("pause");
+
+};
