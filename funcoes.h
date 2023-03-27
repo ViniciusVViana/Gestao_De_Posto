@@ -46,7 +46,7 @@ struct Produtos{
 
 struct Funcionarios{
 
-    int login;
+    char login;
     int senha;
     char nome;
     float salario;
