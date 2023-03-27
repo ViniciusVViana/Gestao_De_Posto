@@ -5,9 +5,13 @@
 #include<locale.h>
 #include<string.h>
 
+//DEFINIÇÃO DOS TIPOS DAS ESTRUTURAS.
+
 typedef struct Categorias Categorias;
 typedef struct Endereco Endereco;
 typedef struct Produtos Produtos;
+
+//CRIAÇÃO DAS STRUCTS DO PROGRAMA.
 
 struct Endereco{
 
