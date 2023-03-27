@@ -6,7 +6,7 @@
 #include<string.h>
 
 typedef struct Categorias Categorias;
-typedef struct Endereço Endereço;
+typedef struct Endereco Endereco;
 typedef struct Produtos Produtos;
 
 struct Endereco{
@@ -37,5 +37,17 @@ struct Produtos{
     float preco;
     int entrada;
     int validade;
+
+};
+
+struct Funcionarios{
+
+    int login;
+    int senha;
+    char nome;
+    float salario;
+    Endereco endereco;
+    char cpf;
+    int telefone;
 
 };
