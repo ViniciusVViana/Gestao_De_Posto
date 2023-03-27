@@ -5,21 +5,53 @@
 #include<locale.h>
 #include<string.h>
 
+//DEFINIÇÃO DOS TIPOS DAS ESTRUTURAS.
+
+typedef struct Categorias Categorias;
+typedef struct Endereco Endereco;
+typedef struct Produtos Produtos;
+
+//CRIAÇÃO DAS STRUCTS DO PROGRAMA.
+
 struct Endereco{
 
-    char[99] rua;
-    char[99] bairro;
-    char[99] cidade;
-    char[15] cep;
+    char rua[99];
+    char bairro[99];
+    char cidade[99];
+    char cep[15];
     int num_telefone;
     int id_func;
 
 };
 
-struct Categoria{
+struct Categorias{
     
     int id;
     int idPai;
-    char[99] nome;
+    char nome[99];
+
+};
+
+struct Produtos{
+
+    int id;
+    Categorias cat;
+    char nome[99];
+    int quantidade;
+    float preco;
+    int entrada;
+    int validade;
+
+};
+
+struct Funcionarios{
+
+    int login;
+    int senha;
+    char nome;
+    float salario;
+    Endereco endereco;
+    char cpf;
+    int telefone;
 
 };
