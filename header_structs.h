@@ -10,6 +10,7 @@
 typedef struct Categorias Categorias;
 typedef struct Endereco Endereco;
 typedef struct Produtos Produtos;
+typedef struct Funcionarios Funcionarios;
 
 //CRIAÇÃO DAS STRUCTS DO PROGRAMA.
 
@@ -20,21 +21,21 @@ struct Endereco{
     char cidade[99];
     char cep[15];
     int num_telefone;
-    int id_func;
+    int identificacao_func;
 
 };
 
 struct Categorias{
     
-    int id;
-    int idPai;
+    int identificacao_categoria;
+    int identificacao_categoria_pai;
     char nome[99];
 
 };
 
 struct Produtos{
 
-    int id;
+    int identificacao_produto;
     Categorias cat;
     char nome[99];
     int quantidade;

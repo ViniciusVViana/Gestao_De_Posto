@@ -1,49 +1,54 @@
-#include "funcoes.h"
+#include"header_structs.h"
+#include"header_estoque.h"
+#include"header_funcionarios.h"
+#include"header_vendas.h"
+#include"header_relatorios.h"
 
-void main()
-{
+void main(){
+
+    setlocale(LC_ALL, "Portuguese");
 
     int op, isVerified = 1;
 
-    if (isVerified == 1)
-    {
-        do
-        {
-            printf("Bem vindo ao sistema!\n");
-            printf("1 - Cadastrar novo funcionario\n");
-            printf("2 - Realizar venda\n");
-            printf("3 - Relatórios\n");
-            printf("4 - Controle de estoque\n");
-            printf("0 - Sair\n");
-            printf("Digite a opcao desejada: ");
-            scanf("%d", &op);
+    if (isVerified == 1){
+        
+        do{
 
-            switch (op)
-            {
+            printf("Bem vindo ao sistema!\n");
+            printf("1 - Funcionarios\n");
+            printf("2 - Realizar venda.\n");
+            printf("3 - Relatórios\n");
+            printf("4 - Estoque\n");
+            printf("0 - Sair.\n");
+            printf("Digite a opcao desejada: ");
+            scanf("%d", &op) ;
+
+            switch(op){
+
             case 1:
-                printf("Cadastrando novo usuario...");
+                printf("Menu de funcionarios.");
                 /*
-                   Função para cadastrar novo usuario
+                Função para cadastrar novo usuario
                 */
                 break;
             case 2:
-                printf("Realizando venda...");
+                printf("Menu de venda.");
                 /*
-                   Função para realizar venda
+                Função para realizar venda
                 */
                 break;
             case 3:
-                printf("Relatorios...");
+                printf("Menu de relatorios.");
                 /*
-                   Função de relatorios
-                   Relatorios de funcionarios, vendas, estoque
+                Função de relatorios
+                Relatorios de funcionarios, vendas, estoque
                 */
                 break;
             case 4:
-                printf("Controle de estoque...");
+                printf("Menu de estoque.");
                 /*
-                   Função para controle de estoque
-                   Adicionar, remover, alterar
+                Funções de estoque
+                Adicionar, editar, e remover
                 */
                 break;
             case 0:
@@ -53,14 +58,14 @@ void main()
                 printf("Opcao invalida!");
                 break;
             };
-            printf("%d", op);
-        } while (op != 0);
-    }
-    else
-    {
+
+        }while (op != 0);
+
+    }else{
+
         printf("Redirecionando para a tela de login...");
         system("pause");
+
     };
 
-    system("pause");
 };
