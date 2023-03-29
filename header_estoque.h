@@ -2,6 +2,6 @@
 
 void tamanho_estoque(){
 
-    teste();
+    criacao_estoque();
 
 };
