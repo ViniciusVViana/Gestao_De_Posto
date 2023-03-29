@@ -1,3 +1,6 @@
+#ifndef header_structs_h
+#define header_structs_h
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -7,10 +10,10 @@
 
 //DEFINIÇÃO DOS TIPOS DAS ESTRUTURAS.
 
-typedef struct Categorias Categorias;
-typedef struct Endereco Endereco;
-typedef struct Produtos Produtos;
-typedef struct Funcionarios Funcionarios;
+//  struct Categorias categorias;
+//  struct Endereco endereco;
+//  struct Produtos produtos;
+//  struct Funcionarios funcionarios;
 
 //CRIAÇÃO DAS STRUCTS DO PROGRAMA.
 
@@ -36,7 +39,7 @@ struct Categorias{
 struct Produtos{
 
     int identificacao_produto;
-    Categorias cat;
+    struct Categorias cat;
     char nome[99];
     int quantidade;
     float preco;
@@ -51,8 +54,10 @@ struct Funcionarios{
     int senha;
     char nome;
     float salario;
-    Endereco endereco;
+    struct Endereco endereco;
     char cpf;
     int telefone;
 
 };
+
+#endif

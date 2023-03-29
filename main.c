@@ -1,4 +1,3 @@
-#include"header_structs.h"
 #include"header_estoque.h"
 #include"header_funcionarios.h"
 #include"header_vendas.h"
@@ -14,7 +13,7 @@ void main(){
         
         do{
 
-            printf("Bem vindo ao sistema!\n");
+            printf("\nBem vindo ao sistema!\n");
             printf("1 - Funcionarios\n");
             printf("2 - Realizar venda.\n");
             printf("3 - Relatórios\n");
@@ -45,11 +44,10 @@ void main(){
                 */
                 break;
             case 4:
-                printf("Menu de estoque.");
-                /*
-                Funções de estoque
-                Adicionar, editar, e remover
-                */
+                printf("Menu de estoque.\n");
+
+                tamanho_estoque();
+
                 break;
             case 0:
                 printf("Saindo do sistema...");
