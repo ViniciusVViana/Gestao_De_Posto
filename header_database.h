@@ -3,8 +3,11 @@
     /*struct Produtos* produto_posto = (struct Produtos*)malloc(4 * sizeof(struct Produtos));*/
 
 struct Produtos produto_posto[4];
+struct Produtos *produto_loja;
 
 void criacao_estoque(){
+
+    produto_loja = (struct Produtos *)malloc(2 * sizeof(struct Produtos));
 
     strcpy(produto_posto[0].nome,"Gasolina comum");
     produto_posto[0].identificacao_produto = 1111;
@@ -32,11 +35,27 @@ void criacao_estoque(){
     produto_posto[3].quantidade = 1000;
     produto_posto[3].preco = 5.94;
     produto_posto[3].cat.identificacao_categoria_pai = 1;
-    produto_posto[3].cat.identificacao_categoria = 3;    
+    produto_posto[3].cat.identificacao_categoria = 3;
 
-    printf("%s", produto_posto[0].nome);
-    printf("%s", produto_posto[1].nome);
-    printf("%s", produto_posto[2].nome);
-    printf("%s", produto_posto[3].nome);
+    strcpy(produto_loja[0].nome, "Doritos");
+    produto_loja[0].identificacao_produto = 2111;
+    produto_loja[0].quantidade = 50;
+    produto_loja[0].preco = 9.99;
+    produto_loja[0].cat.identificacao_categoria_pai = 1;
+    produto_loja[0].cat.identificacao_categoria = 1;
+
+    strcpy(produto_loja[1].nome, "Baconzitos");
+    produto_loja[1].identificacao_produto = 2112;
+    produto_loja[1].quantidade = 50;
+    produto_loja[1].preco = 9.99;
+    produto_loja[1].cat.identificacao_categoria_pai = 1;
+    produto_loja[1].cat.identificacao_categoria = 1;    
+
+    printf("%s\n", produto_posto[0].nome);
+    printf("%s\n", produto_posto[1].nome);
+    printf("%s\n", produto_posto[2].nome);
+    printf("%s\n", produto_posto[3].nome);
+    printf("%s\n", produto_loja[0].nome);
+    printf("%s\n", produto_loja[1].nome);
 
 };
