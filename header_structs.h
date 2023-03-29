@@ -12,8 +12,8 @@
 
 //  struct Categorias categorias;
 //  struct Endereco endereco;
-//  struct Produtos produtos;
-//  struct Funcionarios funcionarios;
+typedef struct Produtos Produtos;
+typedef struct Funcionarios Funcionarios;
 
 //CRIAÇÃO DAS STRUCTS DO PROGRAMA.
 
@@ -46,8 +46,8 @@ struct Produtos{
 };
 
 struct Funcionarios{
-
-    char login;
+    int identificacao_func;
+    char[99] login;
     int senha;
     char nome;
     float salario;
