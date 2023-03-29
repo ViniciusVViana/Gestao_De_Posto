@@ -46,6 +46,7 @@ struct Produtos{
 };
 
 struct Funcionarios{
+
     int identificacao_func;
     char[99] login;
     int senha;
