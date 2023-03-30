@@ -1,6 +1,18 @@
 #include"header_database.h"
 
-void tamanho_estoque(){
+void adicionar_estoque(){
+
+    
+
+};
+
+void remover_estoque(){
+
+    
+
+};
+
+void alterar_estoque(){
 
     
 
