@@ -76,7 +76,4 @@ void cadastroFunc(){
 
     printf("Funcionario cadastrado com sucesso.\n")
 
-
-
-
 }

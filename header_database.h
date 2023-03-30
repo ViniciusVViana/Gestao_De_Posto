@@ -49,7 +49,7 @@ void incializacao_estoque(){
     produto_loja[0].preco = 9.99;
     produto_loja[0].cat.identificacao_categoria_pai = 1;
     produto_loja[0].cat.identificacao_categoria = 1;
-    strcpy(produto_loja[0].cat.nome_categoria,"Alimentos");
+    strcpy(produto_loja[0].cat.nome_categoria,"Salgados");
 
     strcpy(produto_loja[1].nome, "Baconzitos");
     produto_loja[1].identificacao_produto = 2112;
@@ -57,7 +57,7 @@ void incializacao_estoque(){
     produto_loja[1].preco = 9.99;
     produto_loja[1].cat.identificacao_categoria_pai = 1;
     produto_loja[1].cat.identificacao_categoria = 1;
-    strcpy(produto_loja[1].cat.nome_categoria,"Alimentos");
+    strcpy(produto_loja[1].cat.nome_categoria,"Salgados");
 
     strcpy(produto_loja[2].nome, "Cebolitos");
     produto_loja[2].identificacao_produto = 2113;
@@ -65,9 +65,9 @@ void incializacao_estoque(){
     produto_loja[2].preco = 9.99;
     produto_loja[2].cat.identificacao_categoria_pai = 1;
     produto_loja[2].cat.identificacao_categoria = 1;
-    strcpy(produto_loja[2].cat.nome_categoria,"Alimentos");
+    strcpy(produto_loja[2].cat.nome_categoria,"Salgados");
 
-    strcpy(produto_loja[3].nome, "Coca-cola");
+    strcpy(produto_loja[3].nome, "Coca-cola-lata");
     produto_loja[3].identificacao_produto = 2121;
     produto_loja[3].quantidade = 50;
     produto_loja[3].preco = 3.50;
@@ -75,7 +75,7 @@ void incializacao_estoque(){
     produto_loja[3].cat.identificacao_categoria = 2;
     strcpy(produto_loja[3].cat.nome_categoria,"Bebidas");
 
-    strcpy(produto_loja[4].nome, "Skol");
+    strcpy(produto_loja[4].nome, "Skol-lata");
     produto_loja[4].identificacao_produto = 2122;
     produto_loja[4].quantidade = 50;
     produto_loja[4].preco = 3.50;
@@ -83,45 +83,45 @@ void incializacao_estoque(){
     produto_loja[4].cat.identificacao_categoria = 2;
     strcpy(produto_loja[4].cat.nome_categoria,"Bebidas");
 
-    strcpy(produto_loja[5].nome, "");
-    produto_loja[5].identificacao_produto = ;
-    produto_loja[5].quantidade = ;
-    produto_loja[5].preco = ;
-    produto_loja[5].cat.identificacao_categoria_pai = ;
-    produto_loja[5].cat.identificacao_categoria = ;
-    strcpy(produto_loja[5].cat.nome_categoria,"");
+    strcpy(produto_loja[5].nome, "Antartica-lata");
+    produto_loja[5].identificacao_produto = 2122;
+    produto_loja[5].quantidade = 50;
+    produto_loja[5].preco = 3.50;
+    produto_loja[5].cat.identificacao_categoria_pai = 1;
+    produto_loja[5].cat.identificacao_categoria = 2;
+    strcpy(produto_loja[5].cat.nome_categoria,"Bebidas");
 
-    strcpy(produto_loja[6].nome, "");
-    produto_loja[6].identificacao_produto = ;
-    produto_loja[6].quantidade = ;
-    produto_loja[6].preco = ;
-    produto_loja[6].cat.identificacao_categoria_pai = ;
-    produto_loja[6].cat.identificacao_categoria = ;
-    strcpy(produto_loja[6].cat.nome_categoria,"");
+    strcpy(produto_loja[6].nome, "Trident");
+    produto_loja[6].identificacao_produto = 2131;
+    produto_loja[6].quantidade = 50;
+    produto_loja[6].preco = 2.79;
+    produto_loja[6].cat.identificacao_categoria_pai = 1;
+    produto_loja[6].cat.identificacao_categoria = 3;
+    strcpy(produto_loja[6].cat.nome_categoria,"Doces");
 
-    strcpy(produto_loja[7].nome, "");
-    produto_loja[7].identificacao_produto = ;
-    produto_loja[7].quantidade = ;
-    produto_loja[7].preco = ;
-    produto_loja[7].cat.identificacao_categoria_pai = ;
-    produto_loja[7].cat.identificacao_categoria = ;
-    strcpy(produto_loja[7].cat.nome_categoria,"");
+    strcpy(produto_loja[7].nome, "Halls");
+    produto_loja[7].identificacao_produto = 2132;
+    produto_loja[7].quantidade = 50;
+    produto_loja[7].preco = 1.79;
+    produto_loja[7].cat.identificacao_categoria_pai = 1;
+    produto_loja[7].cat.identificacao_categoria = 3;
+    strcpy(produto_loja[7].cat.nome_categoria,"Doces");
 
-    strcpy(produto_loja[8].nome, "");
-    produto_loja[8].identificacao_produto = ;
-    produto_loja[8].quantidade = ;
-    produto_loja[8].preco = ;
-    produto_loja[8].cat.identificacao_categoria_pai = ;
-    produto_loja[8].cat.identificacao_categoria = ;
-    strcpy(produto_loja[8].cat.nome_categoria,"");
+    strcpy(produto_loja[8].nome, "Carregador de celular");
+    produto_loja[8].identificacao_produto = 2291;
+    produto_loja[8].quantidade = 50;
+    produto_loja[8].preco = 12.50;
+    produto_loja[8].cat.identificacao_categoria_pai = 2;
+    produto_loja[8].cat.identificacao_categoria = 9;
+    strcpy(produto_loja[8].cat.nome_categoria,"Eletronicos");
 
-    strcpy(produto_loja[9].nome, "");
-    produto_loja[9].identificacao_produto = ;
-    produto_loja[9].quantidade = ;
-    produto_loja[9].preco = ;
-    produto_loja[9].cat.identificacao_categoria_pai = ;
-    produto_loja[9].cat.identificacao_categoria = ;
-    strcpy(produto_loja[9].cat.nome_categoria,"");
+    strcpy(produto_loja[9].nome, "Lanterna");
+    produto_loja[9].identificacao_produto = 2292;
+    produto_loja[9].quantidade = 50;
+    produto_loja[9].preco = 23.90;
+    produto_loja[9].cat.identificacao_categoria_pai = 2;
+    produto_loja[9].cat.identificacao_categoria = 9;
+    strcpy(produto_loja[9].cat.nome_categoria,"Eleronicos");
 
     /*printf("%s\n", produto_posto[0].nome);
     printf("%s\n", produto_posto[1].nome);
