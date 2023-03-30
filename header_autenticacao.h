@@ -74,6 +74,6 @@ void cadastroFunc(){
     printf("Informe o numero de telefone do funcionario: ");
     scanf("%d", &funcionario.endereco.num);
 
-    printf("Funcionario cadastrado com sucesso.\n")
+    printf("Funcionario cadastrado com sucesso.\n");
 
 }
