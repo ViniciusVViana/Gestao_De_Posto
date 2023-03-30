@@ -30,6 +30,7 @@ struct Endereco{
 
 struct Categorias{
     
+    char nome_categoria[99];
     int identificacao_categoria;
     int identificacao_categoria_pai;    
 
@@ -40,7 +41,7 @@ struct Produtos{
     int identificacao_produto;
     struct Categorias cat;
     char nome[99];
-    int quantidade;
+    float quantidade;
     float preco;
 
 };
@@ -48,7 +49,7 @@ struct Produtos{
 struct Funcionarios{
 
     int identificacao_func;
-    char[99] login;
+    char login[99];
     int senha;
     char nome;
     float salario;

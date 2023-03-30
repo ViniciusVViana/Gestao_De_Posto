@@ -56,9 +56,10 @@ void main(){
     setlocale(LC_ALL, "Portuguese");
 
     int op, isVerified = 1, id_funcionario;
+
     Funcionarios *funcionarioLogado;
     funcionarioLogado = (Funcionarios *)malloc(1 * sizeof(Funcionarios));
-
+    
     isVerified = login(funcionarioLogado);
     
 
@@ -85,7 +86,7 @@ void main(){
                 break;
             case 2:
                 printf("Menu de venda.");
-                realizarVenda();
+               /*  realizarVenda(); */
                 break;
             case 3:
                 printf("Menu de relatorios.");
@@ -96,8 +97,6 @@ void main(){
                 break;
             case 4:
                 printf("Menu de estoque.\n");
-
-                tamanho_estoque();
 
                 break;
             case 0:
@@ -112,6 +111,6 @@ void main(){
 
     }
 
-    free(funcionarioLogado);
+    /* free(funcionarioLogado); */
 
 };
