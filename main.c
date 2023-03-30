@@ -3,63 +3,19 @@
 #include"header_vendas.h"
 #include"header_relatorios.h"
 #include"header_structs.h"
+#include "header_autenticacao.h"
 
 
-int login(Funcionarios funcionarioLogado){
-    
-        int senha, isVerified = 0, op;
-        char login[99];
-        Funcionarios *funcionario;
-        funcionario = (Funcionarios *)malloc(1 * sizeof(Funcionarios));
-    
-        do{
-    
-            printf("Informe o seu login: ");
-            scanf("%s", &login);
-            printf("Informe a sua senha: ");
-            scanf("%d", &senha);
-    
-            isVerified = verificaLogin(id_funcionario, senha, &funcionario);
-    
-            if (isVerified == 0){
-                printf("Login ou senha incorretos.\n");
-                printf("[1] Tentar novamente \n[2] Esqueci minha senha \n[3] Cadastrar novo usuario\n");
-                scanf("%d", &op);
-
-                switch(op){
-                    case 1:
-                        printf("Tentando novamente.\n");
-                        break;
-                    case 2:
-                        printf("Esqueci minha senha.\n");
-                        break;
-                    case 3:
-                        printf("Cadastrar novo usuario.\n");
-                        break;
-                    default:
-                        printf("Opcao invalida.\n");
-                        break;
-                }
-
-            }else{
-                printf("Login realizado com sucesso.\n");
-                funcionarioLogado = funcionario;
-            };
-    
-        }while (isVerified == 0);
-    
-        return isVerified;
-}
 
 void main(){
 
     setlocale(LC_ALL, "Portuguese");
 
-    int op, isVerified = 1, id_funcionario;
+    int op, isVerified, id_funcionario;
     Funcionarios *funcionarioLogado;
     funcionarioLogado = (Funcionarios *)malloc(1 * sizeof(Funcionarios));
 
-    isVerified = login(funcionarioLogado);
+    isVerified = login();
     
 
     if (isVerified == 1){

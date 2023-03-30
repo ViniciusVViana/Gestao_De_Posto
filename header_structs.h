@@ -23,7 +23,7 @@ struct Endereco{
     char bairro[99];
     char cidade[99];
     char cep[15];
-    int num_telefone;
+    int num;
     int identificacao_func;
 
 };
@@ -50,10 +50,10 @@ struct Funcionarios{
     int identificacao_func;
     char[99] login;
     int senha;
-    char nome;
+    char nome[99];
     float salario;
     struct Endereco endereco;
-    char cpf;
+    char cpf[15];
     int telefone;
 
 };
