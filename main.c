@@ -9,7 +9,9 @@
 
 void main(){
 
-    setlocale(LC_ALL, "Portuguese");
+    Produtos *produto_posto;
+    produto_posto = (Produtos *)malloc(15 * sizeof(Produtos));
+    incializacao_estoque(&produto_posto);
 
     int op, isVerified, id_funcionario;
     Funcionarios *funcionarioLogado;

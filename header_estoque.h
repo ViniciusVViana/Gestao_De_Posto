@@ -1,19 +1,7 @@
 #include"header_database.h"
 
-void adicionar_estoque(){
+int buscaProduto(Produtos id_produto, Produtos *produto){
 
-    
 
-};
-
-void remover_estoque(){
-
-    
-
-};
-
-void alterar_estoque(){
-
-    
 
 };
