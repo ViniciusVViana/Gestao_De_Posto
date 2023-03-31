@@ -4,7 +4,8 @@
 int realizarVenda(int id_func)
 {
     int id_produto, produtoEncontrado = 0, quantidade, cont = 1, op, sucesso = 0;
-    Produtos *venda, *produto;
+    Produtos *venda, **produto;
+    produto = &produto_posto;
     venda = (Produtos *)malloc(1 * sizeof(Produtos));
 
     printf("=-=-=-=-=-=-=-=-=-= Menu de venda =-=-=-=-=-=-=-=-=-=\n");

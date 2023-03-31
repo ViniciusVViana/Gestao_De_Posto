@@ -1,6 +1,6 @@
 #include"header_database.h"
 
-int buscaProduto(int id_produto, Produtos *produto){
+int buscaProduto(int id_produto, Produtos produto){
 
     int cont;
 
@@ -8,7 +8,13 @@ int buscaProduto(int id_produto, Produtos *produto){
 
         if(id_produto == produto[cont].identificacao_produto){
             
-            
+            if(produto[cont].quantidade > 0){
+
+                produto = ;
+
+                return 1;
+
+            };
             
         };
         
