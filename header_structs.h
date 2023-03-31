@@ -28,6 +28,8 @@ struct Endereco{
 
 };
 
+int size_stock = 15;
+
 struct Categorias{
     
     char nome_categoria[99];

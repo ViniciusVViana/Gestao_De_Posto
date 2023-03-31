@@ -5,12 +5,11 @@
 #include"header_structs.h"
 #include"header_autenticacao.h"
 
-
+Produtos *produto_posto;
 
 void main(){
 
-    Produtos *produto_posto;
-    produto_posto = (Produtos *)malloc(15 * sizeof(Produtos));
+    produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
     incializacao_estoque(&produto_posto);
 
     int op, isVerified, id_funcionario;
