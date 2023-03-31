@@ -1,6 +1,6 @@
 #include"header_database.h"
 
-int buscaProduto(int id_produto, Produtos produto){
+int buscaProduto(int id_produto, Produtos *produto){
 
     int cont;
 
