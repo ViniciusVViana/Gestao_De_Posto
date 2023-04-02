@@ -38,6 +38,7 @@ void main(){
                 /*
                 Função para cadastrar novo usuario
                 */
+                cadastroFunc();
                 break;
             case 2:
                 printf("Menu de venda.");

@@ -12,7 +12,7 @@ int login(){
             printf("Informe a sua senha: ");
             scanf("%d", &senha);
     
-            isVerified = verificaLogin(id_funcionario,login, senha, &funcionario);
+            isVerified = verificaLogin(login, senha, &funcionario);
     
             if (isVerified == 0){
                 printf("Login ou senha incorretos.\n");
@@ -76,4 +76,4 @@ void cadastroFunc(){
 
     printf("Funcionario cadastrado com sucesso.\n");
 
-}
+} 
