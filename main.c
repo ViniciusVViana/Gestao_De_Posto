@@ -5,11 +5,12 @@
 #include"header_structs.h"
 #include"header_autenticacao.h"
 
-
+Produtos *produto_posto;
 
 void main(){
 
-    setlocale(LC_ALL, "Portuguese");
+    produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
+    incializacao_estoque(&produto_posto);
 
     int op, isVerified, id_funcionario;
     Funcionarios *funcionarioLogado;

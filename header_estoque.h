@@ -1,19 +1,23 @@
 #include"header_database.h"
 
-void adicionar_estoque(){
+int buscaProduto(int id_produto, Produtos *produto){
 
-    
+    int cont;
 
-};
+    for(cont = 0; cont < size_stock; cont++){
 
-void remover_estoque(){
+        if(id_produto == produto[cont].identificacao_produto){
+            
+            if(produto[cont].quantidade > 0){
 
-    
+                produto = ;
 
-};
+                return 1;
 
-void alterar_estoque(){
-
-    
+            };
+            
+        };
+        
+    };
 
 };

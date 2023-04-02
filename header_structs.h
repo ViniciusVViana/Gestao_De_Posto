@@ -10,11 +10,11 @@
 
 //DEFINIÇÃO DOS TIPOS DAS ESTRUTURAS.
 
-//  struct Categorias categorias;
+  struct Categorias Categorias;
 //  struct Endereco endereco;
 typedef struct Produtos Produtos;
 typedef struct Funcionarios Funcionarios;
-
+typedef struct Vendas Vendas;
 //CRIAÇÃO DAS STRUCTS DO PROGRAMA.
 
 struct Endereco{
@@ -28,6 +28,8 @@ struct Endereco{
 
 };
 
+int size_stock = 15;
+
 struct Categorias{
     
     char nome_categoria[99];
@@ -39,7 +41,7 @@ struct Categorias{
 struct Produtos{
 
     int identificacao_produto;
-    struct Categorias cat;
+    Categorias cat;
     char nome[99];
     float quantidade;
     float preco;
@@ -59,4 +61,12 @@ struct Funcionarios{
 
 };
 
+struct Vendas{
+    Produtos *produto;
+    float valor_total;
+    float valor_pago;
+    int forma_pagamento;
+    int id_func;
+
+}
 #endif
