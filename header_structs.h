@@ -10,7 +10,7 @@
 
 //DEFINIÇÃO DOS TIPOS DAS ESTRUTURAS.
 
-  struct Categorias Categorias;
+typedef struct Categorias Categorias;
 //  struct Endereco endereco;
 typedef struct Produtos Produtos;
 typedef struct Funcionarios Funcionarios;

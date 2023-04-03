@@ -1,10 +1,10 @@
 #include "header_structs.h"
 #include "header_estoque.h"
 
-int realizarVenda(int id_func, Produto *produto_posto)
+int realizarVenda(int id_func, Produtos *produto_posto)
 {
     int id_produto, produtoEncontrado = 0, quantidade, cont = 1, op, opCard,opCreditCard, sucesso = 0;
-    Produtos *produto;
+    Produtos produto;
     Vendas venda;
     venda->valor_total = 0;
     venda->produto = (Produtos *)malloc(1 * sizeof(Produtos));
@@ -15,7 +15,7 @@ int realizarVenda(int id_func, Produto *produto_posto)
     {
         printf("Informe o codigo do produto: ");
         scanf("%d", &id_produto);
-        produtoEncontrado = buscaProduto(id_produto, &produto, &produto_posto);
+        produtoEncontrado = buscaProduto(id_produto, produto, &produto_posto);
 
         if (!produtoEncontrado)
         {
