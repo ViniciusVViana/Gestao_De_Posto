@@ -13,7 +13,7 @@ int realizarVenda(int id_func)
     {
         printf("Informe o codigo do produto: ");
         scanf("%d", &id_produto);
-        produtoEncontrado = buscaProduto(id_produto, &produto);
+        produtoEncontrado = buscaProduto(id_produto, &produto, &produto_posto);
 
         if (!produtoEncontrado)
         {
