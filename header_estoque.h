@@ -1,6 +1,10 @@
 #include"header_database.h"
 
+<<<<<<< HEAD
 int buscaProduto(int id_produto, Produtos produto, Produtos *produto_posto){
+=======
+int buscaProduto(int id_produto, Produtos *produto){
+>>>>>>> 0c89578d8834641e53058f78096362f6972fc091
 
     int cont;
 
