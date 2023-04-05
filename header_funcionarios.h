@@ -13,7 +13,6 @@ int verificaLogin(char login[99], int senha, Funcionarios **funcionario){
             return 0;
         }
         cont ++;
-    }while(cont <= strlen(funcionario));
-}
-
-#endif
+        int quant = strlem(funcionario);
+    }while(cont <= quant);
+}  
