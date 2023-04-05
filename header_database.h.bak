@@ -1,4 +1,4 @@
-#include"header_structs.h"
+#include"header_structs.h";
 
 void incializacao_estoque(Produtos *produto_posto){
 
@@ -21,7 +21,7 @@ void incializacao_estoque(Produtos *produto_posto){
     strcpy(produto_posto[2].nome,"Etanol");
     produto_posto[2].identificacao_produto = 1120;
     produto_posto[2].quantidade = 1000;
-    produto_posto[2].preco = 4.87;
+    produto_posto[2].preco = 4,87;
     produto_posto[2].cat.identificacao_categoria_pai = 1;
     produto_posto[2].cat.identificacao_categoria = 2;
     strcpy(produto_posto[2].cat.nome_categoria,"Combustivel");

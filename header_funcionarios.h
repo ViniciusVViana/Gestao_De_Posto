@@ -1,6 +1,5 @@
-
-#include "header_autenticacao.h"
-#include "header_structs.h"
+#include "header_autenticacao.h";
+#include "header_structs.h";
 
 int verificaLogin(char login[99], int senha, Funcionarios **funcionario){
     int cont = 0;

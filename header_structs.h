@@ -11,7 +11,7 @@
 //DEFINIÇÃO DOS TIPOS DAS ESTRUTURAS.
 
 typedef struct Categorias Categorias;
-//  struct Endereco endereco;
+typedef struct Endereco endereco;
 typedef struct Produtos Produtos;
 typedef struct Funcionarios Funcionarios;
 typedef struct Vendas Vendas;
@@ -31,10 +31,10 @@ struct Endereco{
 int size_stock = 15;
 
 struct Categorias{
-    
+
     char nome_categoria[99];
     int identificacao_categoria;
-    int identificacao_categoria_pai;    
+    int identificacao_categoria_pai;
 
 };
 
@@ -68,5 +68,5 @@ struct Vendas{
     int forma_pagamento;
     int id_func;
 
-}
+};
 #endif

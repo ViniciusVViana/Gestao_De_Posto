@@ -1,7 +1,7 @@
 #include "header_structs.h"
 #include "header_estoque.h"
 
-int realizarVenda(int id_func, Produtos *produto_posto)
+int realizarVenda(int id_func)
 {
     int id_produto, produtoEncontrado = 0, quantidade, cont = 1, op, opCard,opCreditCard, sucesso = 0;
     Produtos produto;
@@ -15,7 +15,7 @@ int realizarVenda(int id_func, Produtos *produto_posto)
     {
         printf("Informe o codigo do produto: ");
         scanf("%d", &id_produto);
-        produtoEncontrado = buscaProduto(id_produto, produto, &produto_posto);
+        produtoEncontrado = buscaProduto(id_produto, produto);
 
         if (!produtoEncontrado)
         {
@@ -41,6 +41,8 @@ int realizarVenda(int id_func, Produtos *produto_posto)
                 venda->produto->identificacao_produto = produto->identificacao_produto;
                 venda->produto->nome_produto = produto->nome_produto;
                 strcpy(venda->produto->nome, produto->nome);
+
+                pos_venda(&produto);
 
                 printf("Venda realizada com sucesso.\n");
                 cont++;
@@ -108,7 +110,7 @@ int realizarVenda(int id_func, Produtos *produto_posto)
                             printf("Opcao invalida.\n");
                         }
                     } while (opCreditCard != 1 || opCreditCard != 2);
-                    
+
                 }
                 else if (opCard == 2)
                 {

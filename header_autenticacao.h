@@ -1,4 +1,4 @@
-#include "header_structs.h"
+#include "header_structs.h";
 
 int login(){
         int senha, isVerified = 0, op, id_funcionario;
@@ -6,14 +6,14 @@ int login(){
         Funcionarios *funcionario;
         funcionario = (Funcionarios *)malloc(1 * sizeof(Funcionarios));
         do{
-    
+
             printf("Informe o seu login: ");
             scanf("%s", &login);
             printf("Informe a sua senha: ");
             scanf("%d", &senha);
-    
+
             isVerified = verificaLogin(login, senha, &funcionario);
-    
+
             if (isVerified == 0){
                 printf("Login ou senha incorretos.\n");
                 printf("[1] Tentar novamente \n[2] Cadastrar novo usuario \n[0] Sair");
@@ -37,11 +37,11 @@ int login(){
                 printf("Login realizado com sucesso.\n");
                 funcionarioLogado = funcionario;
             };
-    
+
         }while (isVerified == 0);
 
         isVerified = op == 0 ? 0 : 1;
-    
+
         return isVerified;
 }
 
@@ -76,4 +76,4 @@ void cadastroFunc(){
 
     printf("Funcionario cadastrado com sucesso.\n");
 
-} 
+}
