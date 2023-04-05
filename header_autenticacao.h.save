@@ -24,8 +24,7 @@ int login(Funcionarios funcionarioLogado){
 
                 switch(op){
                     case 1:
-                        system("cls");
-                        break;
+                        system("")
                     case 2:
                         printf("Cadastrar novo usuario.\n");
                         cadastroFunc();

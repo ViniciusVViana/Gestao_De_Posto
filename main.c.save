@@ -9,8 +9,6 @@
 
 void main(){
 
-    Produtos *produto_posto;
-
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
     inicializacao_estoque(&produto_posto);
 

@@ -1,4 +1,6 @@
 #include"header_structs.h"
+#ifndef header_database_h
+#define header_database_h
 
 void inicializacao_estoque(Produtos *produto_posto){
 
@@ -130,3 +132,5 @@ void inicializacao_estoque(Produtos *produto_posto){
     printf("%s\n", produto_loja[1].nome);*/
 
 };
+
+#endif

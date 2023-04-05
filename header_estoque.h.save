@@ -1,6 +1,4 @@
 #include"header_database.h"
-#ifndef header_estoque_h
-#define header_estoque_h 
 
 int buscaProduto(int id_produto, Produtos produto){
 
@@ -32,18 +30,16 @@ int buscaProduto(int id_produto, Produtos produto){
 
 };
 
-// void pos_venda(Produtos *produto){
+void pos_venda(Produtos *produto){
 
-//     for (int cont = 0; cont < size_stock; cont++){
+    for (int cont = 0; cont < size_stock; cont++){
 
-//         if (produto->identificacao_produto == produto_posto[cont]->identificacao_produto){
+        if (produto->identificacao_produto == produto_posto[cont]->identificacao_produto){
 
 
 
-//         };
+        };
 
-//     };
+    };
 
-// };
-
-#endif
+};
