@@ -1,0 +1,21 @@
+Um poema, pelo autor "GePeTeco"
+
+Testes, entre nós, um jogo de suspeitas
+Cada um com sua tática, suas regras feitas
+Investigando pistas, buscando a verdade
+Em busca de um traidor, que age com falsidade
+
+Mas assim como o jogo, no mundo da programação
+Testes são essenciais, para evitar a frustração
+Arquivos .txt guardam os dados, que serão usados nos testes
+Para garantir que o software funcione da forma que esteja correta
+
+Cada commit de teste é como uma jogada certeira
+Que nos ajuda a encontrar erros, antes que causem besteira
+E assim como no jogo, a colaboração é chave
+Para garantir que o projeto siga adiante, sem perder a qualidade
+
+Então que nossos testes sejam sempre bem feitos
+E que nossos commits sejam como jogadas perfeitas
+Para que nossos projetos, como uma tripulação unida
+Consigam seguir em frente, rumo a vitória merecida.
