@@ -1,4 +1,3 @@
-
 #include "header_autenticacao.h"
 #include "header_structs.h"
 
@@ -11,5 +10,6 @@ int verificaLogin(char login[99], int senha, Funcionarios **funcionario){
             return 0;
         }
         cont ++;
-    }while(cont <= strlem(funcionario));
-}
+        int quant = strlem(funcionario);
+    }while(cont <= quant);
+}  
