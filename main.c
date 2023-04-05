@@ -1,5 +1,5 @@
-#include"header_estoque.h";
-#include"header_funcionarios.h";
+#include"header_estoque.h"
+#include"header_funcionarios.h"
 #include"header_vendas.h"
 #include"header_relatorios.h"
 #include"header_structs.h"

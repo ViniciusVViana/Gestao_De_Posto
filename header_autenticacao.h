@@ -1,4 +1,4 @@
-#include "header_structs.h";
+#include "header_structs.h"
 
 #ifndef header_autenticacao_h
 #define header_autenticacao_h
