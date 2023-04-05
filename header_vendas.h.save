@@ -1,7 +1,5 @@
 #include "header_structs.h"
 #include "header_estoque.h"
-#ifndef header_vendas_h
-#define header_vendas_h
 
 int realizarVenda(int id_func)
 {
@@ -43,7 +41,7 @@ int realizarVenda(int id_func)
                 venda.produto->identificacao_produto = produto.identificacao_produto;
                 strcpy(venda.produto->nome, produto.nome);
 
-                //pos_venda(&produto);
+                pos_venda(&produto);
 
                 printf("Venda realizada com sucesso.\n");
                 cont++;
@@ -137,14 +135,3 @@ int realizarVenda(int id_func)
 
     return sucesso;
 }
-
-void adicionaVenda(Vendas venda)
-{
-    FILE *arquivo;
-    arquivo = fopen("vendas.txt", "a");
-
-    fprintf(arquivo, "%d %d %d %d %f %f %f %f %d", venda.id_func, venda.produto->identificacao_produto, venda.produto->quantidade, venda.produto->preco, venda.valor_total, venda.valor_pago, venda.troco, venda.forma_pagamento);
-    fclose(arquivo);
-}
-
-#endif
