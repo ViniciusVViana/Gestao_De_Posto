@@ -10,9 +10,12 @@
 void main(){
 
     Produtos *produto_posto;
-
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
     inicializacao_estoque(&produto_posto);
+
+    Funcionarios *funcionarios_cadastrado;
+    funcionarios_cadastrado = (Funcionarios *)malloc(size_funcionario * sizeof(Funcionarios));
+    inicializacao_funcionarios(&funcionarios_cadastrado);
 
     int op, isVerified, id_funcionario;
     Funcionarios funcionarioLogado;

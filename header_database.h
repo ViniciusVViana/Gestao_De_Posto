@@ -124,12 +124,11 @@ void inicializacao_estoque(Produtos *produto_posto){
     produto_posto[14].cat.identificacao_categoria = 4;
     strcpy(produto_posto[14].cat.nome_categoria,"Eleronicos");
 
-    /*printf("%s\n", produto_posto[0].nome);
-    printf("%s\n", produto_posto[1].nome);
-    printf("%s\n", produto_posto[2].nome);
-    printf("%s\n", produto_posto[3].nome);
-    printf("%s\n", produto_loja[0].nome);
-    printf("%s\n", produto_loja[1].nome);*/
+};
+
+void inicializacao_funcionarios(Funcionarios *funcionarios_cadastrado){
+
+    
 
 };
 

@@ -16,7 +16,7 @@ typedef struct Produtos Produtos;
 typedef struct Funcionarios Funcionarios;
 typedef struct Vendas Vendas;
 //CRIAÇÃO DAS STRUCTS DO PROGRAMA.
-Produtos *produto_posto;
+/* Produtos *produto_posto; */
 struct Endereco{
 
     char rua[99];
@@ -47,6 +47,8 @@ struct Produtos{
     float preco;
 
 };
+
+int size_funcionario = 5;
 
 struct Funcionarios{
 
