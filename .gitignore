@@ -1,4 +1,4 @@
 .vscode/
 output/
-*.exe
+.exe
 Documentacao/
