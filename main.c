@@ -7,7 +7,7 @@
 
 
 
-void main(){
+int main(){
 
     Produtos *produto_posto;
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
@@ -73,5 +73,5 @@ void main(){
     }
 
     /* free(funcionarioLogado); */
-
+    return 0; //O compilador exije que o retorno seja do tipo int
 };
