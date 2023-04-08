@@ -2,7 +2,7 @@
 #ifndef header_database_h
 #define header_database_h
 
-void inicializacao_estoque(Produtos *produto_posto){
+void inicializacao_estoque(){
 
     strcpy(produto_posto[0].nome,"Gasolina comum");
     produto_posto[0].identificacao_produto = 1111;
@@ -126,9 +126,27 @@ void inicializacao_estoque(Produtos *produto_posto){
 
 };
 
-void inicializacao_funcionarios(Funcionarios *funcionarios_cadastrado){
+void inicializacao_funcionarios(){
 
-    
+    //CADASTRO DO ADMIN
+    funcionarios_cadastrado[0].identificacao_func = 1;
+    strcpy(funcionarios_cadastrado[0].login, "admin");
+    funcionarios_cadastrado[0].senha = 123;
+    strcpy(funcionarios_cadastrado[0].nome, "admin");
+
+    //CADASTRO FUNCIONARIOS
+    funcionarios_cadastrado[1].identificacao_func = 2;
+    funcionarios_cadastrado[1].senha = 111;
+    funcionarios_cadastrado[1].salario = 1250.00;
+    funcionarios_cadastrado[1].telefone = 45998445946;
+    funcionarios_cadastrado[1].endereco.num = 355;
+    strcpy(funcionarios_cadastrado[1].endereco.cep, "85819-010");
+    strcpy(funcionarios_cadastrado[1].endereco.cidade, "Cascavel");
+    strcpy(funcionarios_cadastrado[1].endereco.bairro, "Turisparque");
+    strcpy(funcionarios_cadastrado[1].endereco.rua, "Prates");
+    strcpy(funcionarios_cadastrado[1].cpf, "120.699,349-93");
+    strcpy(funcionarios_cadastrado[1].nome, "Vinicius Vieira Viana");
+    strcpy(funcionarios_cadastrado[1].login, "vini");
 
 };
 
