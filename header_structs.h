@@ -61,7 +61,7 @@ struct Funcionarios{
     float salario;
     Endereco endereco;
     char cpf[15];
-    int telefone;
+    long int telefone;
 
 };
 
