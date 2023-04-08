@@ -15,7 +15,7 @@ int main(){
     funcionarios_cadastrado = (Funcionarios *)malloc(size_funcionario * sizeof(Funcionarios));
     inicializacao_funcionarios();
 
-    int op, isVerified, id_funcionario;
+    int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0;
     Funcionarios funcionarioLogado;
 
     isVerified = login(funcionarioLogado);
@@ -33,6 +33,7 @@ int main(){
             printf("0 - Sair.\n");
             printf("Digite a opcao desejada: ");
             scanf("%d", &op) ;
+            fflush(stdin);
 
             switch(op){
 
@@ -55,7 +56,49 @@ int main(){
                 */
                 break;
             case 4:
+
                 printf("Menu de estoque.\n");
+                printf("Selecione a opção desejada: ");
+                printf("1 - Adicionar item ao estoque.");
+                printf("2 - Adicionar novo item ao estoque.");
+                scanf("%i", &op);
+                fflush(stdin);
+                switch(op){
+
+                case 1:
+                    adicionado = adcionar_estoque();
+
+                    if(adicionado == 1){
+
+                        printf("Produto adicionado com sucesso!");
+
+                    }else if(adicionado == 0){
+
+                        printf("Houve algum erro ao adicionar o produto ao estoque");
+
+                    };
+                    break;
+
+                case 2:
+                    novo_produto = novo_estoque();
+
+                    if(novo_produto == 1){
+
+                        printf("Novo produto adicionado com sucesso!");
+
+                    }else if(novo_produto == 0){
+
+                        printf("Houve algum erro ao adicionar o novo produto ao estoque");
+
+                    };
+
+                    break;
+
+                default:
+                    printf("Opcao invalida.");
+                    break;
+
+                };
 
                 break;
             case 0:
