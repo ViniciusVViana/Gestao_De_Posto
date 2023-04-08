@@ -37,7 +37,8 @@ int buscaProduto(int id_produto, Produtos produto){
 //ESTA FUNÇÃO ADICIONA UNIDADES DE UM CERTO PRODUTO AO ESTOQUE
 int adicionar_estoque(){
 
-    int busc, cont, quant;
+    int busc, cont;
+    float quant;
 
     printf("Busque o item ao qual voce quer adicionar estoque pela identificacao (4 digitos).");
     scanf("%i", &busc);
