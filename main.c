@@ -1,5 +1,5 @@
-#include"header_estoque.h";
-#include"header_funcionarios.h";
+#include"header_estoque.h"
+#include"header_funcionarios.h"
 #include"header_vendas.h"
 #include"header_relatorios.h"
 #include"header_structs.h"
@@ -7,7 +7,7 @@
 
 
 
-void main(){
+int main(){
 
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
     inicializacao_estoque();
@@ -71,5 +71,5 @@ void main(){
     }
 
     /* free(funcionarioLogado); */
-
+    return 0; //O compilador exije que o retorno seja do tipo int
 };
