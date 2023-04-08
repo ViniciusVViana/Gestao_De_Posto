@@ -1,5 +1,6 @@
 #include "header_structs.h"
 #include "header_estoque.h"
+
 #ifndef header_vendas_h
 #define header_vendas_h
 

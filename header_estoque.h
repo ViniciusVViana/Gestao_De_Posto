@@ -1,4 +1,5 @@
 #include"header_database.h"
+
 #ifndef header_estoque_h
 #define header_estoque_h 
 
