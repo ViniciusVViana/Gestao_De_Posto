@@ -66,7 +66,7 @@ int main(){
                 switch(op){
 
                 case 1:
-                    adicionado = adcionar_estoque();
+                    adicionado = adicionar_estoque();
 
                     if(adicionado == 1){
 
