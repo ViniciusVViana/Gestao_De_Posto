@@ -1,4 +1,4 @@
-#include "header_structs.h";
+#include "header_structs.h"
 
 #ifndef header_autenticacao_h
 #define header_autenticacao_h
@@ -6,8 +6,6 @@
 int login(Funcionarios funcionarioLogado){
         int senha, isVerified = 0, op, id_funcionario;
         char login[99];
-        Funcionarios *funcionario;
-        funcionario = (Funcionarios *)malloc(1 * sizeof(Funcionarios));
         do{
 
             printf("Informe o seu login: ");
