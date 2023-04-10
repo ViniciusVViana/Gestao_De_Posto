@@ -1,5 +1,3 @@
-#include"header_database.h"
-
 #ifndef header_estoque_h
 #define header_estoque_h 
 
@@ -49,7 +47,7 @@ int adicionar_estoque(){
         if(busc == produto_posto[cont].identificacao_produto){
 
             printf("O quanto desse item voce quer adicionar: ");
-            scanf("%f", quant);
+            scanf("%lf", &quant);
             fflush(stdin);
 
             produto_posto[0].quantidade += quant;
@@ -76,22 +74,22 @@ int novo_estoque(){
     gets(produto_posto[size_stock - 1].nome);
     fflush(stdin);
     printf("Insira o codigo de identificacao do produto:");
-    scanf("%i", produto_posto[size_stock - 1].identificacao_produto);
+    scanf("%i", &produto_posto[size_stock - 1].identificacao_produto);
     fflush(stdin);
     printf("Insira o tamanho do estoque do produto: ");
-    scanf("%f", produto_posto[size_stock - 1].quantidade);
+    scanf("%lf", &produto_posto[size_stock - 1].quantidade);
     fflush(stdin);
     printf("Insira o valor do produto: ");
-    scanf("%f", produto_posto[size_stock - 1].preco);
+    scanf("%f", &produto_posto[size_stock - 1].preco);
     fflush(stdin);
     printf("Insira o nome da catgoria que o produto se encaixa: ");
     gets(produto_posto[size_stock - 1].cat.nome_categoria);
     fflush(stdin);
     printf("Insira a categoria pai do produto: ");
-    scanf("%i", produto_posto[size_stock - 1].cat.identificacao_categoria_pai);
+    scanf("%i", &produto_posto[size_stock - 1].cat.identificacao_categoria_pai);
     fflush(stdin);
     printf("insira a cattegoria do produto: ");
-    scanf("%i", produto_posto[size_stock - 1].cat.identificacao_categoria);
+    scanf("%i", &produto_posto[size_stock - 1].cat.identificacao_categoria);
     fflush(stdin);
 
     return 1;

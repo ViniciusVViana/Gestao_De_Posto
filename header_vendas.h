@@ -1,8 +1,14 @@
-#include "header_structs.h"
-#include "header_estoque.h"
-
 #ifndef header_vendas_h
 #define header_vendas_h
+
+void adicionaVenda(Vendas venda)
+{
+    FILE *arquivo;
+    arquivo = fopen("vendas.txt", "a");
+
+    fprintf(arquivo, "%d %d %.2f %.2f %f %f %f %f %d", venda.id_func, venda.produto->identificacao_produto, venda.produto->quantidade, venda.produto->preco, venda.valor_total, venda.valor_pago, venda.troco, venda.forma_pagamento);
+    fclose(arquivo);
+}
 
 int realizarVenda(int id_func)
 {
@@ -95,7 +101,7 @@ int realizarVenda(int id_func)
                         else if (opCreditCard == 2)
                         {
                             int parcelas;
-                            printf("Informe o numero de parcelas (2% de juros a cada parcela, apenas contado acima de 4 parcelas): ");
+                            printf("Informe o numero de parcelas (2%% de juros a cada parcela, apenas contado acima de 4 parcelas): "); //Na parte "2% de juros" o compilador tava achando que deveria ser inserido um numero decimal (% d -> %d), então eu troquei para %%, para ele printar apenas "%"
                             scanf("%d", &parcelas);
                             if (parcelas > 4)
                             {
@@ -139,13 +145,6 @@ int realizarVenda(int id_func)
     return sucesso;
 }
 
-void adicionaVenda(Vendas venda)
-{
-    FILE *arquivo;
-    arquivo = fopen("vendas.txt", "a");
 
-    fprintf(arquivo, "%d %d %d %d %f %f %f %f %d", venda.id_func, venda.produto->identificacao_produto, venda.produto->quantidade, venda.produto->preco, venda.valor_total, venda.valor_pago, venda.troco, venda.forma_pagamento);
-    fclose(arquivo);
-}
 
 #endif

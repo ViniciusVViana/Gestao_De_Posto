@@ -1,6 +1,3 @@
-#include "header_autenticacao.h"
-#include "header_structs.h"
-
 #ifndef header_funcionarios_h
 #define header_funcionarios_h
 int verificaLogin(char login[99], int senha, Funcionarios **funcionario){
@@ -14,7 +11,7 @@ int verificaLogin(char login[99], int senha, Funcionarios **funcionario){
             return 0;
         }
         cont ++;
-        int quant = strlem(funcionario);
+        int quant = strlen(funcionario); // Tinha que ter declarado esse quant lá em cima, não? Caso contrario, o while não funciona
     }while(cont <= quant);
 }  
 
