@@ -1,7 +1,6 @@
 #include"header_structs.h"
 #include"header_database.h"
 #include"header_estoque.h"
-#include"header_funcionarios.h"
 #include"header_autenticacao.h"
 #include"header_vendas.h"
 #include"header_relatorios.h"
@@ -17,9 +16,9 @@ int main(){
 
     int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0;
     Funcionarios funcionarioLogado;
-    
 
-    isVerified = login(funcionarioLogado); 
+
+    isVerified = login(funcionarioLogado);
     //Autenticador de funcionários. Retorna 1 caso autenticado, e 0 se o usuário desejar fechar o programa.
 
 
