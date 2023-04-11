@@ -25,7 +25,9 @@ int main(){
     if (isVerified == 1){
         id_funcionario = funcionarioLogado.identificacao_func;
         do{
-            Sleep(1000);
+            op = 0;
+            Sleep(1500);
+
             system("cls");
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
@@ -51,7 +53,7 @@ int main(){
                 realizarVenda(id_funcionario);
                 break;
             case 3:
-                printf("Menu de relatorios.");
+                printf("\n\n===---==---=== Menu de relatorios ===---==---===");
                 /*
                 Função de relatorios
                 Relatorios de funcionarios, vendas, estoque
@@ -59,10 +61,10 @@ int main(){
                 break;
             case 4:
 
-                printf("Menu de estoque.\n");
-                printf("Selecione a opção desejada: ");
-                printf("1 - Adicionar item ao estoque.");
-                printf("2 - Adicionar novo item ao estoque.");
+                printf("\n\n===---==---=== Menu de estoque ===---==---===\n");
+                printf("\n=--= Selecione a opção desejada:\n");
+                printf("[1] Adicionar item ao estoque\n");
+                printf("[2] Adicionar novo item ao estoque\nR: ");
                 scanf("%i", &op);
                 fflush(stdin);
                 switch(op){
@@ -72,11 +74,11 @@ int main(){
 
                     if(adicionado == 1){
 
-                        printf("Produto adicionado com sucesso!");
+                        printf("\n\n=--= Produto adicionado com sucesso!");
 
                     }else if(adicionado == 0){
 
-                        printf("Houve algum erro ao adicionar o produto ao estoque");
+                        printf("\n\n-==- Houve algum erro ao adicionar o produto ao estoque!");
 
                     };
                     break;
@@ -86,28 +88,28 @@ int main(){
 
                     if(novo_produto == 1){
 
-                        printf("Novo produto adicionado com sucesso!");
+                        printf("\n\n=--=--= Novo produto adicionado com sucesso! =--=--=");
 
                     }else if(novo_produto == 0){
 
-                        printf("Houve algum erro ao adicionar o novo produto ao estoque");
+                        printf("\n\n-==-==- Houve algum erro ao adicionar o novo produto ao estoque -==-==-");
 
                     };
 
                     break;
 
                 default:
-                    printf("Opcao invalida.");
+                    printf("\n\n-=- Opcao invalida.");
                     break;
 
                 };
 
                 break;
             case 0:
-                printf("Saindo do sistema...");
+                printf("\n\n-=--=- Saindo do sistema...");
                 break;
             default:
-                printf("Opcao invalida!");
+                printf("\n\n-=- Opcao invalida!");
                 break;
             };
 
