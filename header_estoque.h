@@ -1,9 +1,10 @@
 #ifndef header_estoque_h
-#define header_estoque_h 
+#define header_estoque_h
 #include"header_database.h"
 
-int buscaProduto(int id_produto, Produtos produto){
-
+int buscaProduto(int id_produto, Produtos *produto){
+    produto->quantidade = 0; //inicializa a quantidade do produto com 0
+    produto->preco = 0;     //inicializa o preco do produto com 0
     int cont;
 
     for(cont = 0; cont < size_stock; cont++){
@@ -11,15 +12,15 @@ int buscaProduto(int id_produto, Produtos produto){
         if(id_produto == produto_posto[cont].identificacao_produto){
 
             if(produto_posto[cont].quantidade > 0){
-
-                strcpy(produto.nome, produto_posto[cont].nome);
-                produto.identificacao_produto = produto_posto[cont].identificacao_produto;
-                produto.quantidade = produto_posto[cont].quantidade;
-                produto.preco = produto_posto[cont].preco;
-                produto.cat.identificacao_categoria_pai = produto_posto[cont].cat.identificacao_categoria_pai;
-                produto.cat.identificacao_categoria = produto_posto[cont].cat.identificacao_categoria;
-                strcpy(produto.cat.nome_categoria, produto_posto[cont].cat.nome_categoria);
-
+ 
+                strcpy(produto->nome, produto_posto[cont].nome);
+                produto->identificacao_produto = produto_posto[cont].identificacao_produto;
+                produto->quantidade = produto_posto[cont].quantidade;
+                produto->preco = produto_posto[cont].preco;
+                produto->cat.identificacao_categoria_pai = produto_posto[cont].cat.identificacao_categoria_pai;
+                produto->cat.identificacao_categoria = produto_posto[cont].cat.identificacao_categoria;
+                strcpy(produto->cat.nome_categoria, produto_posto[cont].cat.nome_categoria);
+ 
                 return 1;
 
             };

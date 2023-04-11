@@ -46,7 +46,7 @@ struct Produtos{
     int identificacao_produto;
     Categorias cat;
     char nome[99];
-    float quantidade;
+    int quantidade;
     float preco;
 
 };

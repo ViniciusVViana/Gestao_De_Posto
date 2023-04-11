@@ -46,7 +46,6 @@ int main(){
                 cadastroFunc();
                 break;
             case 2:
-                printf("Menu de venda.");
                 realizarVenda(id_funcionario);
                 break;
             case 3:
