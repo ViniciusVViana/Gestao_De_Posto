@@ -72,10 +72,12 @@ int main(){
                     if(adicionado == 1){
 
                         printf("Produto adicionado com sucesso!");
+                        Sleep(1500);
 
                     }else if(adicionado == 0){
 
                         printf("Houve algum erro ao adicionar o produto ao estoque");
+                        Sleep(1500);
 
                     };
                     break;
@@ -86,10 +88,12 @@ int main(){
                     if(novo_produto == 1){
 
                         printf("Novo produto adicionado com sucesso!");
+                        Sleep(1500);
 
                     }else if(novo_produto == 0){
 
                         printf("Houve algum erro ao adicionar o novo produto ao estoque");
+                        Sleep(1500);
 
                     };
 
