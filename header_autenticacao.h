@@ -11,7 +11,7 @@ int login(Funcionarios funcionarioLogado){
             printf("Informe a sua senha: ");
             scanf("%d", &senha);
 
-            isVerified = verificaLogin(login, senha, &funcionario);
+            isVerified = verificaLogin(login, senha, &funcionarios_cadastrado);
 
             if (isVerified == 0){
                 printf("Login ou senha incorretos.\n");
@@ -37,7 +37,7 @@ int login(Funcionarios funcionarioLogado){
 
             }else{
                 printf("Login realizado com sucesso.\n");
-                funcionarioLogado = funcionario[0];
+                funcionarioLogado = funcionarios_cadastrado[0];
 
             };
 
