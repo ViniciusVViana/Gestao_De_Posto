@@ -12,7 +12,6 @@ int verificaLogin(char login[99], int senha){
         }
     }
     return 0;
-
 }
 
 void cadastroFunc(){
@@ -23,7 +22,7 @@ void cadastroFunc(){
 
 
 
-    printf("===---==---===Cadastro de funcionarios===---==---===\n");
+    printf("===---==---=== Cadastro de funcionarios ===---==---===\n");
     printf("\n=-= Informe o nome do funcionario: (String)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].nome); //NOTA: funcionario.nome, por ser uma string, já é considerado como um ponteiro. Logo, não é necessario o '&' (Eu acho) (Para fins legais, me retenho de quaisquer problemas decorridos dessa alteração) ~Vitor
     fflush(stdin);
@@ -75,23 +74,23 @@ int login(Funcionarios funcionarioLogado){
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
             printf("\n===================================================\n");
-            printf("\nEscolha uma opcao:\n[1] Fazer login\n[2] Cadastrar um novo usuario\n[3] Sair\nR: ");
+            printf("\n=--= Escolha uma opcao:\n[1] Fazer login\n[2] Cadastrar um novo usuario\n[3] Sair\nR: ");
             scanf("%i", &op); //"op" de "opção"
             fflush(stdin);//Coloquei isso em tudo por segurança
 
             switch(op){
                 case 1:
-                    printf("\nLogin!");
+                    printf("\n-=- Login! -=-");
 
-                    printf("\nInforme o seu login: \nR: ");
+                    printf("\n=-= Informe o seu login: \nR: ");
                     scanf("%s", login);//login não exige &, pois %s já o trata como ponteiro
                     fflush(stdin);
-                    printf("\nInforme a sua senha: \nR: ");
+                    printf("\n=-= Informe a sua senha: \nR: ");
                     scanf("%d", &senha);
                     fflush(stdin);
                     isVerified = verificaLogin(login, senha);
                     if(isVerified == 0){
-                        printf("Login e/ou senha incorretos");
+                        printf("--=-- Login e/ou senha incorretos --=--");
                     }
                     Sleep(1500);
                 break;
@@ -101,12 +100,12 @@ int login(Funcionarios funcionarioLogado){
                 break;
 
                 case 3:
-                    printf("\n\nTchau!\n");
+                    printf("\n\n-==---==- Tchau! -==---==-\n");
                     //return 0;
                 break;
 
                 default:
-                    printf("\nOpcao invalida! Tente de novo!");
+                    printf("\n-==---==- Opcao invalida! Tente de novo! -==---==-");
                     Sleep(1500); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
                 break;
             }
@@ -114,7 +113,7 @@ int login(Funcionarios funcionarioLogado){
         // Só sai do loop se: Usuário sair (op == 3); ou Usuário for autenticado (isVerified == 1)
 
         if(isVerified != 0){
-            printf("Login realizado com sucesso.\n");
+            printf("=--===--= Login realizado com sucesso =--===--=\n");
             funcionarioLogado = funcionarios_cadastrado[0];
         }
 

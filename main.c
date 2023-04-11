@@ -40,7 +40,7 @@ int main(){
 
             switch(op){
             case 1:
-                printf("\n\n===---==---===Menu de funcionarios===---==---===");
+                //printf("\n\n===---==---=== Menu de funcionarios ===---==---==="); esse printf é desnecessario
                 /*
                 Função para cadastrar novo usuario
                 */
