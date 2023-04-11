@@ -36,7 +36,6 @@ int login(Funcionarios funcionarioLogado){
                 break;
 
                 case 2:
-                    printf("\nCadastrando novo usuario!");
                     cadastroFunc();
                 break;
 
@@ -103,6 +102,7 @@ void cadastroFunc(){
     fflush(stdin);
 
     printf("Funcionario cadastrado com sucesso.\n");
+    Sleep(2500);
 
 }
 
