@@ -2,12 +2,8 @@
 #include"header_database.h"
 #include"header_estoque.h"
 #include"header_autenticacao.h"
-#include"header_funcionarios.h"
 #include"header_vendas.h"
 #include"header_relatorios.h"
-
-
-
 
 
 int main(){
@@ -21,34 +17,36 @@ int main(){
     int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0;
     Funcionarios funcionarioLogado;
 
+
     isVerified = login(funcionarioLogado);
+    //Autenticador de funcionários. Retorna 1 caso autenticado, e 0 se o usuário desejar fechar o programa.
 
 
     if (isVerified == 1){
         id_funcionario = funcionarioLogado.identificacao_func;
         do{
-
-            printf("\nBem vindo ao sistema!\n");
-            printf("1 - Funcionarios\n");
-            printf("2 - Realizar venda.\n");
-            printf("3 - Relatórios\n");
-            printf("4 - Estoque\n");
-            printf("0 - Sair.\n");
-            printf("Digite a opcao desejada: ");
+            system("cls");
+            printf("\n===================================================");
+            printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
+            printf("\n===================================================\n");
+            printf("\n=--= Bem vindo ao sistema!\n=-= Escolha uma opcao:\n\n");
+            printf("[1] Cadastrar novos funcionarios\n");
+            printf("[2] Realizar venda.\n");
+            printf("[3] Gerar relatorios\n");
+            printf("[4] Checar estoque\n");
+            printf("[0] Sair.\nR: ");
             scanf("%d", &op) ;
             fflush(stdin);
 
             switch(op){
-
             case 1:
-                printf("Menu de funcionarios.");
+                printf("\n\n===---==---===Menu de funcionarios===---==---===");
                 /*
                 Função para cadastrar novo usuario
                 */
                 cadastroFunc();
                 break;
             case 2:
-                printf("Menu de venda.");
                 realizarVenda(id_funcionario);
                 break;
             case 3:
