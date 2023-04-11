@@ -148,46 +148,46 @@ void inicializacao_funcionarios(){
     strcpy(funcionarios_cadastrado[1].login, "vini");
 
     //CADASTRO FUNCIONARIOS DEITOS
-    funcionarios_cadastrado[1].identificacao_func = 3;
-    funcionarios_cadastrado[1].senha = 333;
-    funcionarios_cadastrado[1].salario = 1250.00;
-    funcionarios_cadastrado[1].telefone = 998011876;
-    funcionarios_cadastrado[1].endereco.num = 345;
-    strcpy(funcionarios_cadastrado[1].endereco.cep, "85829-210");
-    strcpy(funcionarios_cadastrado[1].endereco.cidade, "Cascavel");
-    strcpy(funcionarios_cadastrado[1].endereco.bairro, "Centro");
-    strcpy(funcionarios_cadastrado[1].endereco.rua, "penis");
-    strcpy(funcionarios_cadastrado[1].cpf, "634.346.349-39");
-    strcpy(funcionarios_cadastrado[1].nome, "Guilherme Augusto Deitos");
-    strcpy(funcionarios_cadastrado[1].login, "deitos");
+    funcionarios_cadastrado[2].identificacao_func = 3;
+    funcionarios_cadastrado[2].senha = 333;
+    funcionarios_cadastrado[2].salario = 1250.00;
+    funcionarios_cadastrado[2].telefone = 998011876;
+    funcionarios_cadastrado[2].endereco.num = 345;
+    strcpy(funcionarios_cadastrado[2].endereco.cep, "85829-210");
+    strcpy(funcionarios_cadastrado[2].endereco.cidade, "Cascavel");
+    strcpy(funcionarios_cadastrado[2].endereco.bairro, "Centro");
+    strcpy(funcionarios_cadastrado[2].endereco.rua, "penis");
+    strcpy(funcionarios_cadastrado[2].cpf, "634.346.349-39");
+    strcpy(funcionarios_cadastrado[2].nome, "Guilherme Augusto Deitos");
+    strcpy(funcionarios_cadastrado[2].login, "deitos");
 
     //CADASTRO FUNCIONARIOS VITOR
-    funcionarios_cadastrado[1].identificacao_func = 4;
-    funcionarios_cadastrado[1].senha = 444;
-    funcionarios_cadastrado[1].salario = 1250.00;
-    funcionarios_cadastrado[1].telefone = 999852607;
-    funcionarios_cadastrado[1].endereco.num = 645;
-    strcpy(funcionarios_cadastrado[1].endereco.cep, "83419-012");
-    strcpy(funcionarios_cadastrado[1].endereco.cidade, "lider");
-    strcpy(funcionarios_cadastrado[1].endereco.bairro, "lider");
-    strcpy(funcionarios_cadastrado[1].endereco.rua, "lider");
-    strcpy(funcionarios_cadastrado[1].cpf, "534.734,123-93");
-    strcpy(funcionarios_cadastrado[1].nome, "Vitor Mayorca Camargo");
-    strcpy(funcionarios_cadastrado[1].login, "lider");
+    funcionarios_cadastrado[3].identificacao_func = 4;
+    funcionarios_cadastrado[3].senha = 444;
+    funcionarios_cadastrado[3].salario = 1250.00;
+    funcionarios_cadastrado[3].telefone = 999852607;
+    funcionarios_cadastrado[3].endereco.num = 645;
+    strcpy(funcionarios_cadastrado[3].endereco.cep, "83419-012");
+    strcpy(funcionarios_cadastrado[3].endereco.cidade, "lider");
+    strcpy(funcionarios_cadastrado[3].endereco.bairro, "lider");
+    strcpy(funcionarios_cadastrado[3].endereco.rua, "lider");
+    strcpy(funcionarios_cadastrado[3].cpf, "534.734,123-93");
+    strcpy(funcionarios_cadastrado[3].nome, "Vitor Mayorca Camargo");
+    strcpy(funcionarios_cadastrado[3].login, "lider");
 
     //CADASTRO FUNCIONARIOS WEBERSON
-    funcionarios_cadastrado[1].identificacao_func = 5;
-    funcionarios_cadastrado[1].senha = 555;
-    funcionarios_cadastrado[1].salario = 1250.00;
-    funcionarios_cadastrado[1].telefone = 998258142;
-    funcionarios_cadastrado[1].endereco.num = 764;
-    strcpy(funcionarios_cadastrado[1].endereco.cep, "65437-010");
-    strcpy(funcionarios_cadastrado[1].endereco.cidade, "weber");
-    strcpy(funcionarios_cadastrado[1].endereco.bairro, "weber");
-    strcpy(funcionarios_cadastrado[1].endereco.rua, "weber");
-    strcpy(funcionarios_cadastrado[1].cpf, "836.746,147-44");
-    strcpy(funcionarios_cadastrado[1].nome, "Weberson Moreli Junior");
-    strcpy(funcionarios_cadastrado[1].login, "weber");
+    funcionarios_cadastrado[4].identificacao_func = 5;
+    funcionarios_cadastrado[4].senha = 555;
+    funcionarios_cadastrado[4].salario = 1250.00;
+    funcionarios_cadastrado[4].telefone = 998258142;
+    funcionarios_cadastrado[4].endereco.num = 764;
+    strcpy(funcionarios_cadastrado[4].endereco.cep, "65437-010");
+    strcpy(funcionarios_cadastrado[4].endereco.cidade, "weber");
+    strcpy(funcionarios_cadastrado[4].endereco.bairro, "weber");
+    strcpy(funcionarios_cadastrado[4].endereco.rua, "weber");
+    strcpy(funcionarios_cadastrado[4].cpf, "836.746,147-44");
+    strcpy(funcionarios_cadastrado[4].nome, "Weberson Moreli Junior");
+    strcpy(funcionarios_cadastrado[4].login, "weber");
 
 };
 
