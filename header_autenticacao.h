@@ -1,7 +1,6 @@
 #ifndef header_autenticacao_h
 #define header_autenticacao_h
 #include"header_database.h"
-#include"header_structs.h"
 
 int login(Funcionarios funcionarioLogado){
         int senha, isVerified = 0, op, id_funcionario;
@@ -30,6 +29,12 @@ int login(Funcionarios funcionarioLogado){
                     scanf("%d", &senha);
                     fflush(stdin);
                     isVerified = verificaLogin(login, senha);
+                    if(isVerified == 0){
+                        printf("deu merda");
+                    }else{
+                        printf("tudo de boa");
+                    }
+
 
                 break;
 
@@ -110,11 +115,14 @@ int verificaLogin(char login[99], int senha){
 
     for (cont; cont <= quant; cont++){
         if(strcmp(login, funcionarios_cadastrado[cont].login) == 0 && senha == funcionarios_cadastrado[cont].senha){
+            printf("tudo certo%i", cont);
             return 1;           
         }else{
-            return 0;
+            printf("deu merda%i", cont);
         }
     }
+    return 0;
+
 }
 
 #endif
