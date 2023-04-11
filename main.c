@@ -25,6 +25,8 @@ int main(){
     if (isVerified == 1){
         id_funcionario = funcionarioLogado.identificacao_func;
         do{
+            op = 0;
+            Sleep(1500);
             system("cls");
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
@@ -50,7 +52,7 @@ int main(){
                 realizarVenda(id_funcionario);
                 break;
             case 3:
-                printf("===---==---=== Menu de relatorios ===---==---===");
+                printf("\n\n===---==---=== Menu de relatorios ===---==---===");
                 /*
                 Função de relatorios
                 Relatorios de funcionarios, vendas, estoque
@@ -58,7 +60,7 @@ int main(){
                 break;
             case 4:
 
-                printf("===---==---=== Menu de estoque ===---==---===\n");
+                printf("\n\n===---==---=== Menu de estoque ===---==---===\n");
                 printf("\n=--= Selecione a opção desejada:\n");
                 printf("[1] Adicionar item ao estoque\n");
                 printf("[2] Adicionar novo item ao estoque\nR: ");
