@@ -2,7 +2,7 @@
 //4 tipos de relatórios: Relatório da venda atual, de produtos cadastrados, de todas as vendas já feitas e de funcionários cadastrados.
 
 
-void relatorioMono(/*Provavelmente vai receber uma struct com os dados da venda como parâmetro*/){
+int relatorioMono(/*Provavelmente vai receber uma struct com os dados da venda como parâmetro*/){
 
     srand(time(NULL));
     char buffer[20], filename[20];
