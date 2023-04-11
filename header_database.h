@@ -157,7 +157,8 @@ void inicializacao_funcionarios(){
     funcionarios_cadastrado[2].endereco.num = 345;
     strcpy(funcionarios_cadastrado[2].endereco.cep, "85829-210");
     strcpy(funcionarios_cadastrado[2].endereco.cidade, "Cascavel");
-    strcpy(funcionarios_cadastrado[2].endereco.bairro, "Centro");3    strcpy(funcionarios_cadastrado[2].endereco.rua, "penis");
+    strcpy(funcionarios_cadastrado[2].endereco.bairro, "Centro");
+    strcpy(funcionarios_cadastrado[2].endereco.rua, "penis");
     strcpy(funcionarios_cadastrado[2].cpf, "634.346.349-39");
     strcpy(funcionarios_cadastrado[2].nome, "Guilherme Augusto Deitos");
     strcpy(funcionarios_cadastrado[2].login, "deitos");
