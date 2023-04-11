@@ -2,6 +2,64 @@
 #define header_autenticacao_h
 #include"header_database.h"
 
+int verificaLogin(char login[99], int senha){
+    int cont = 0;
+    int quant = size_funcionario;
+
+    for(cont = 0; cont <= quant; cont++){
+        if(strcmp(login, funcionarios_cadastrado[cont].login) == 0 && senha == funcionarios_cadastrado[cont].senha){
+            return 1;           
+        }
+    }
+    return 0;
+
+}
+
+void cadastroFunc(){
+
+    size_funcionario += 1;
+    funcionarios_cadastrado = (Funcionarios *)realloc(funcionarios_cadastrado, size_funcionario * sizeof(Funcionarios));
+
+    printf("Cadastro de funcionarios.\n");
+    printf("Informe o nome do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].nome); //NOTA: funcionario.nome, por ser uma string, já é considerado como um ponteiro. Logo, não é necessario o '&' (Eu acho) (Para fins legais, me retenho de quaisquer problemas decorridos dessa alteração) ~Vitor
+    fflush(stdin);
+    printf("Informe o login do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].login);
+    fflush(stdin);
+    printf("Informe a senha do funcionario: ");
+    scanf("%d", &funcionarios_cadastrado[size_funcionario -1].senha);
+    fflush(stdin);
+    printf("Informe o salario do funcionario: ");
+    scanf("%f", &funcionarios_cadastrado[size_funcionario -1].salario);
+    fflush(stdin);
+    printf("Informe o CPF do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].cpf);
+    fflush(stdin);
+    printf("Informe o telefone do funcionario: ");
+    scanf("%ld", &funcionarios_cadastrado[size_funcionario -1].telefone); //Numero do telefone é do tipo long int, logo exige um %ld.
+    fflush(stdin);
+    printf("Informe o endereco do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.rua);
+    fflush(stdin);
+    printf("Informe o bairro do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.bairro);
+    fflush(stdin);
+    printf("Informe a cidade do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.cidade);
+    fflush(stdin);
+    printf("Informe o CEP do funcionario: ");
+    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.cep);
+    fflush(stdin);
+    printf("Informe o numero da residência: ");//CREIO QUE SEJA PARA SER NUMERO DO ENDEREÇO DO FINCIONARIO
+    scanf("%d", &funcionarios_cadastrado[size_funcionario -1].endereco.num);
+    fflush(stdin);
+
+    printf("Funcionario cadastrado com sucesso.\n");
+    Sleep(2500);
+}
+
+
 int login(Funcionarios funcionarioLogado){
         int senha, isVerified = 0, op, id_funcionario;
         char login[99];
@@ -61,63 +119,8 @@ int login(Funcionarios funcionarioLogado){
 }
 
 
-void cadastroFunc(){
 
-    size_funcionario += 1;
-    funcionarios_cadastrado = (Funcionarios *)realloc(funcionarios_cadastrado, size_funcionario * sizeof(Funcionarios));
 
-    printf("Cadastro de funcionarios.\n");
-    printf("Informe o nome do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].nome); //NOTA: funcionario.nome, por ser uma string, já é considerado como um ponteiro. Logo, não é necessario o '&' (Eu acho) (Para fins legais, me retenho de quaisquer problemas decorridos dessa alteração) ~Vitor
-    fflush(stdin);
-    printf("Informe o login do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].login);
-    fflush(stdin);
-    printf("Informe a senha do funcionario: ");
-    scanf("%d", &funcionarios_cadastrado[size_funcionario -1].senha);
-    fflush(stdin);
-    printf("Informe o salario do funcionario: ");
-    scanf("%f", &funcionarios_cadastrado[size_funcionario -1].salario);
-    fflush(stdin);
-    printf("Informe o CPF do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].cpf);
-    fflush(stdin);
-    printf("Informe o telefone do funcionario: ");
-    scanf("%ld", &funcionarios_cadastrado[size_funcionario -1].telefone); //Numero do telefone é do tipo long int, logo exige um %ld.
-    fflush(stdin);
-    printf("Informe o endereco do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.rua);
-    fflush(stdin);
-    printf("Informe o bairro do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.bairro);
-    fflush(stdin);
-    printf("Informe a cidade do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.cidade);
-    fflush(stdin);
-    printf("Informe o CEP do funcionario: ");
-    scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.cep);
-    fflush(stdin);
-    printf("Informe o numero da residência: ");//CREIO QUE SEJA PARA SER NUMERO DO ENDEREÇO DO FINCIONARIO
-    scanf("%d", &funcionarios_cadastrado[size_funcionario -1].endereco.num);
-    fflush(stdin);
-
-    printf("Funcionario cadastrado com sucesso.\n");
-    Sleep(2500);
-
-}
-
-int verificaLogin(char login[99], int senha){
-    int cont = 0;
-    int quant = size_funcionario;
-
-    for (cont; cont <= quant; cont++){
-        if(strcmp(login, funcionarios_cadastrado[cont].login) == 0 && senha == funcionarios_cadastrado[cont].senha){
-            return 1;           
-        }
-    }
-    return 0;
-
-}
 
 #endif
 

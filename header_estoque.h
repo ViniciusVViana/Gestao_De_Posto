@@ -78,7 +78,7 @@ int novo_estoque(){
     scanf("%i", &produto_posto[size_stock - 1].identificacao_produto);
     fflush(stdin);
     printf("Insira o tamanho do estoque do produto: ");
-    scanf("%f", &produto_posto[size_stock - 1].quantidade);
+    scanf("%i", &produto_posto[size_stock - 1].quantidade);
     fflush(stdin);
     printf("Insira o valor do produto: ");
     scanf("%f", &produto_posto[size_stock - 1].preco);

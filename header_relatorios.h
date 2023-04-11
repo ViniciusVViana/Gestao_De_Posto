@@ -47,4 +47,5 @@ int relatorioMono(/*Provavelmente vai receber uma struct com os dados da venda c
     fprintf(fprt, "|__________Obrigado Pela PrEferencia!___________|\n");
 
     fclose(fprt);
+    return 0;
 }
