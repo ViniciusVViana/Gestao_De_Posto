@@ -25,21 +25,22 @@ int main(){
     if (isVerified == 1){
         id_funcionario = funcionarioLogado.identificacao_func;
         do{
-
-            printf("\nBem vindo ao sistema!\n");
-            printf("1 - Funcionarios\n");
-            printf("2 - Realizar venda.\n");
-            printf("3 - Relatórios\n");
-            printf("4 - Estoque\n");
-            printf("0 - Sair.\n");
-            printf("Digite a opcao desejada: ");
+            system("cls");
+            printf("\n===================================================");
+            printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
+            printf("\n===================================================\n");
+            printf("\n=--= Bem vindo ao sistema!\n=-= Escolha uma opcao:\n\n");
+            printf("[1] Cadastrar novos funcionarios\n");
+            printf("[2] Realizar venda.\n");
+            printf("[3] Gerar relatorios\n");
+            printf("[4] Checar estoque\n");
+            printf("[0] Sair.\nR: ");
             scanf("%d", &op) ;
             fflush(stdin);
 
             switch(op){
-
             case 1:
-                printf("Menu de funcionarios.");
+                printf("\n\n===---==---===Menu de funcionarios===---==---===");
                 /*
                 Função para cadastrar novo usuario
                 */

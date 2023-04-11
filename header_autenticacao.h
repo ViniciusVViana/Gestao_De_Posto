@@ -17,46 +17,49 @@ int verificaLogin(char login[99], int senha){
 
 void cadastroFunc(){
 
+    system("cls");
     size_funcionario += 1;
     funcionarios_cadastrado = (Funcionarios *)realloc(funcionarios_cadastrado, size_funcionario * sizeof(Funcionarios));
 
-    printf("Cadastro de funcionarios.\n");
-    printf("Informe o nome do funcionario: ");
+
+
+    printf("===---==---===Cadastro de funcionarios===---==---===\n");
+    printf("\n=-= Informe o nome do funcionario: (String)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].nome); //NOTA: funcionario.nome, por ser uma string, já é considerado como um ponteiro. Logo, não é necessario o '&' (Eu acho) (Para fins legais, me retenho de quaisquer problemas decorridos dessa alteração) ~Vitor
     fflush(stdin);
-    printf("Informe o login do funcionario: ");
+    printf("\n=-= Informe o login do funcionario: (String)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].login);
     fflush(stdin);
-    printf("Informe a senha do funcionario: ");
+    printf("\n=-= Informe a senha do funcionario: (integer)\nR: ");
     scanf("%d", &funcionarios_cadastrado[size_funcionario -1].senha);
     fflush(stdin);
-    printf("Informe o salario do funcionario: ");
+    printf("\n=-= Informe o salario do funcionario: (float)\nR: ");
     scanf("%f", &funcionarios_cadastrado[size_funcionario -1].salario);
     fflush(stdin);
-    printf("Informe o CPF do funcionario: ");
+    printf("\n=-= Informe o CPF do funcionario: (Com pontuacao)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].cpf);
     fflush(stdin);
-    printf("Informe o telefone do funcionario: ");
+    printf("\n=-= Informe o telefone do funcionario: (integer)\nR: ");
     scanf("%ld", &funcionarios_cadastrado[size_funcionario -1].telefone); //Numero do telefone é do tipo long int, logo exige um %ld.
     fflush(stdin);
-    printf("Informe o endereco do funcionario: ");
+    printf("\n=-= Informe o endereco do funcionario: (string)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.rua);
     fflush(stdin);
-    printf("Informe o bairro do funcionario: ");
+    printf("\n=-= Informe o bairro do funcionario: (string)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.bairro);
     fflush(stdin);
-    printf("Informe a cidade do funcionario: ");
+    printf("\n=-= Informe a cidade do funcionario: (string)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.cidade);
     fflush(stdin);
-    printf("Informe o CEP do funcionario: ");
+    printf("\n=-= Informe o CEP do funcionario: (com pontuacao)\nR: ");
     scanf("%s", funcionarios_cadastrado[size_funcionario -1].endereco.cep);
     fflush(stdin);
-    printf("Informe o numero da residência: ");//CREIO QUE SEJA PARA SER NUMERO DO ENDEREÇO DO FINCIONARIO
+    printf("\n=-= Informe o numero da residencia: (integer)\nR: ");//CREIO QUE SEJA PARA SER NUMERO DO ENDEREÇO DO FINCIONARIO
     scanf("%d", &funcionarios_cadastrado[size_funcionario -1].endereco.num);
     fflush(stdin);
 
-    printf("Funcionario cadastrado com sucesso.\n");
-    Sleep(2500);
+    printf("\n\n===---==---===Funcionario cadastrado com sucesso===---==---===\n");
+    Sleep(1500);
 }
 
 
@@ -90,7 +93,7 @@ int login(Funcionarios funcionarioLogado){
                     if(isVerified == 0){
                         printf("Login e/ou senha incorretos");
                     }
-                    Sleep(3000);
+                    Sleep(1500);
                 break;
 
                 case 2:
@@ -104,7 +107,7 @@ int login(Funcionarios funcionarioLogado){
 
                 default:
                     printf("\nOpcao invalida! Tente de novo!");
-                    Sleep(3000); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
+                    Sleep(1500); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
                 break;
             }
         }while(op != 3 && isVerified == 0);
@@ -118,59 +121,4 @@ int login(Funcionarios funcionarioLogado){
     return isVerified;
 }
 
-
-
-
-
 #endif
-
-
-//Código anterior do verificador de login:
-
-/*
-        do{
-
-            printf("Informe o seu login: ");
-            scanf("%s", login);//O login não exige &, pois %s já o trata como ponteiro ~Vitor
-            printf("Informe a sua senha: ");
-            scanf("%d", &senha);
-            isVerified = verificaLogin(login, senha, &funcionarios_cadastrado);
-
-
-            if (isVerified == 0){
-                printf("Login ou senha incorretos.\n");
-                printf("[1] Tentar novamente \n[2] Cadastrar novo usuario \n[0] Sair");
-                scanf("%d", &op);
-
-                switch(op){
-                    case 1:
-                        system("cls");
-                        break;
-                    case 2:
-                        printf("Cadastrar novo usuario.\n");
-                        cadastroFunc();
-                        break;
-                    case 0:
-                        printf("Saindo.\n");
-                        isVerified = 1;
-                        break;
-                    default:
-                        printf("Opcao invalida.\n");
-                        break;
-                }
-
-
-            }else{
-                printf("Login realizado com sucesso.\n");
-                funcionarioLogado = funcionarios_cadastrado[0];
-
-            };
-
-
-        }while (isVerified == 0);
-        //;//
-
-        //isVerified = op == 0 ? 0 : 1; //Fala protugues seu alienigena
-
-        return isVerified;
-        */
