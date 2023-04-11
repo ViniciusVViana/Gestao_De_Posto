@@ -178,8 +178,8 @@ void inicializacao_funcionarios(){
     strcpy(funcionarios_cadastrado[3].login, "lider");
 
     //CADASTRO FUNCIONARIOS WEBERSON
-    funcionarios_cadastrado[4].senha = 555;
     funcionarios_cadastrado[4].identificacao_func = 5;
+    funcionarios_cadastrado[4].senha = 555;
     funcionarios_cadastrado[4].salario = 1250.00;
     funcionarios_cadastrado[4].telefone = 998258142;
     funcionarios_cadastrado[4].endereco.num = 764;
