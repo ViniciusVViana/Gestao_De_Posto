@@ -1,6 +1,7 @@
-#include"header_database.h"
 #ifndef header_autenticacao_h
 #define header_autenticacao_h
+#include"header_database.h"
+#include"header_structs.h"
 
 int login(Funcionarios funcionarioLogado){
         int senha, isVerified = 0, op, id_funcionario;
@@ -28,7 +29,7 @@ int login(Funcionarios funcionarioLogado){
                     printf("\nInforme a sua senha: \nR: ");
                     scanf("%d", &senha);
                     fflush(stdin);
-                    isVerified = verificaLogin(login, senha, &funcionarios_cadastrado);
+                    isVerified = verificaLogin(login, senha);
 
                 break;
 
@@ -105,17 +106,15 @@ void cadastroFunc(){
 
 int verificaLogin(char login[99], int senha){
     int cont = 0;
-    int quant = sizeof(funcionarios_cadastrado)/sizeof(int);
+    int quant = size_funcionario;
 
-    do{
-            printf("Funcionarios: %s", funcionarios_cadastrado[cont].login);
+    for (cont; cont <= quant; cont++){
         if(strcmp(login, funcionarios_cadastrado[cont].login) == 0 && senha == funcionarios_cadastrado[cont].senha){
-            return 1;
+            return 1;           
         }else{
             return 0;
         }
-        cont ++;
-    }while(cont <= quant);
+    }
 }
 
 #endif
