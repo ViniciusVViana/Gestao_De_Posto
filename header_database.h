@@ -1,4 +1,3 @@
-#include"header_structs.h"
 #ifndef header_database_h
 #define header_database_h
 

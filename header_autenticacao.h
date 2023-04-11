@@ -1,5 +1,3 @@
-#include "header_structs.h"
-
 #ifndef header_autenticacao_h
 #define header_autenticacao_h
 
@@ -9,7 +7,7 @@ int login(Funcionarios funcionarioLogado){
         do{
 
             printf("Informe o seu login: ");
-            scanf("%s", &login);
+            scanf("%s", &login);//Não e melhor usar o fgets(login)?
             printf("Informe a sua senha: ");
             scanf("%d", &senha);
 
