@@ -25,6 +25,7 @@ int main(){
     if (isVerified == 1){
         id_funcionario = funcionarioLogado.identificacao_func;
         do{
+            Sleep(1000);
             system("cls");
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
