@@ -1,15 +1,6 @@
 #ifndef header_vendas_h
 #define header_vendas_h
 
-void adicionaVenda(Vendas venda)
-{
-    FILE *arquivo;
-    arquivo = fopen("vendas.txt", "a");
-
-    fprintf(arquivo, "%d %d %.2f %.2f %f %f %f %f %d", venda.id_func, venda.produto->identificacao_produto, venda.produto->quantidade, venda.produto->preco, venda.valor_total, venda.valor_pago, venda.troco, venda.forma_pagamento);
-    fclose(arquivo);
-}
-
 int realizarVenda(int id_func)
 {
     int id_produto, produtoEncontrado = 0, quantidade, cont = 1, op, opCard,opCreditCard, sucesso = 0;
@@ -139,12 +130,10 @@ int realizarVenda(int id_func)
         }
     } while (op != 1 || op != 2);
 
-    adicionaVenda(venda);
     free(venda.produto);
 
     return sucesso;
 }
-
 
 
 #endif
