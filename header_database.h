@@ -175,7 +175,7 @@ void inicializacao_funcionarios(){
     strcpy(funcionarios_cadastrado[1].nome, "Vitor Mayorca Camargo");
     strcpy(funcionarios_cadastrado[1].login, "lider");
 
-    //CADASTRO FUNCIONARIOS VINICIUS
+    //CADASTRO FUNCIONARIOS WEBERSON
     funcionarios_cadastrado[1].identificacao_func = 5;
     funcionarios_cadastrado[1].senha = 555;
     funcionarios_cadastrado[1].salario = 1250.00;

@@ -76,7 +76,7 @@ void cadastroFunc(){
     scanf("%s", &funcionario.endereco.cidade);
     printf("Informe o CEP do funcionario: ");
     scanf("%s", &funcionario.endereco.cep);
-    printf("Informe o numero de telefone do funcionario: ");
+    printf("Informe o numero de telefone do funcionario: ");//CREIO QUE SEJA PARA SER NUMERO DO ENDEREÇO DO FINCIONARIO
     scanf("%d", &funcionario.endereco.num);
 
     printf("Funcionario cadastrado com sucesso.\n");
