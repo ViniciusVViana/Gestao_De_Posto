@@ -1,7 +1,7 @@
 //Aqui estarão todos as funções relacionadas à leitura e escrita de arquivos
 //4 tipos de relatórios: Relatório da venda atual, de produtos cadastrados, de todas as vendas já feitas e de funcionários cadastrados.
 
-
+//Commit numero 100
 int relatorioMono(/*Provavelmente vai receber uma struct com os dados da venda como parâmetro*/){
 
     srand(time(NULL));
