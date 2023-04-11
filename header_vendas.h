@@ -1,5 +1,3 @@
-#include "header_structs.h"
-#include "header_estoque.h"
 #ifndef header_vendas_h
 #define header_vendas_h
 
@@ -94,7 +92,7 @@ int realizarVenda(int id_func)
                         else if (opCreditCard == 2)
                         {
                             int parcelas;
-                            printf("Informe o numero de parcelas (2% de juros a cada parcela, apenas contado acima de 4 parcelas): ");
+                            printf("Informe o numero de parcelas (2%% de juros a cada parcela, apenas contado acima de 4 parcelas): "); //Na parte "2% de juros" o compilador tava achando que deveria ser inserido um numero decimal (% d -> %d), então eu troquei para %%, para ele printar apenas "%"
                             scanf("%d", &parcelas);
                             if (parcelas > 4)
                             {
@@ -136,5 +134,6 @@ int realizarVenda(int id_func)
 
     return sucesso;
 }
+
 
 #endif
