@@ -13,10 +13,10 @@
 int main(){
 
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
-    inicializacao_estoque();
+    inicializacao_estoque();//CHAMADA DA FUNÇÃO PARA INICIAR O ESTOQUE
 
     funcionarios_cadastrado = (Funcionarios *)malloc(size_funcionario * sizeof(Funcionarios));
-    inicializacao_funcionarios();
+    inicializacao_funcionarios();//CHAMADA DA FUNÇÃO PARA INCIAR OS FUNCIONARIOS CADASTRADOS
 
     int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0;
     Funcionarios funcionarioLogado;
