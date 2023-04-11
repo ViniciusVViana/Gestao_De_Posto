@@ -10,7 +10,7 @@ int login(Funcionarios funcionarioLogado){
 
         do{
             op = 0;
-            //system("cls");
+            system("cls");
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
             printf("\n===================================================\n");
@@ -30,16 +30,12 @@ int login(Funcionarios funcionarioLogado){
                     fflush(stdin);
                     isVerified = verificaLogin(login, senha);
                     if(isVerified == 0){
-                        printf("deu merda");
-                    }else{
-                        printf("tudo de boa");
+                        printf("Login e/ou senha incorretos");
                     }
-
-
+                    Sleep(3000);
                 break;
 
                 case 2:
-                    printf("\nCadastrando novo usuario!");
                     cadastroFunc();
                 break;
 
@@ -106,6 +102,7 @@ void cadastroFunc(){
     fflush(stdin);
 
     printf("Funcionario cadastrado com sucesso.\n");
+    Sleep(2500);
 
 }
 
@@ -115,10 +112,7 @@ int verificaLogin(char login[99], int senha){
 
     for (cont; cont <= quant; cont++){
         if(strcmp(login, funcionarios_cadastrado[cont].login) == 0 && senha == funcionarios_cadastrado[cont].senha){
-            printf("tudo certo%i", cont);
             return 1;           
-        }else{
-            printf("deu merda%i", cont);
         }
     }
     return 0;
