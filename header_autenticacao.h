@@ -4,50 +4,59 @@
 int login(Funcionarios funcionarioLogado){
         int senha, isVerified = 0, op, id_funcionario;
         char login[99];
+        
+        //Eu reescrevi a coisa que estava aqui ~Vitor
+        
         do{
+            op = 0;
+            system("cls");
+            printf("\n===================================================");
+            printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
+            printf("\n===================================================\n");
+            printf("\nEscolha uma opcao:\n[1] Fazer login\n[2] Cadastrar um novo usuario\n[3] Sair\nR: ");
+            scanf("%i", &op); //"op" de "opção"
+            fflush(stdin);//Coloquei isso em tudo por segurança
 
-            printf("Informe o seu login: ");
-            scanf("%s", login);//O login não exige &, pois %s já o trata como ponteiro ~Vitor
-            printf("Informe a sua senha: ");
-            scanf("%d", &senha);
+            switch(op){
+                case 1:
+                    printf("\nLogin!");
+                    
+                    printf("\nInforme o seu login: \nR: ");
+                    scanf("%s", login);//login não exige &, pois %s já o trata como ponteiro 
+                    fflush(stdin);
+                    printf("\nInforme a sua senha: \nR: ");
+                    scanf("%d", &senha);
+                    fflush(stdin);
+                    isVerified = verificaLogin(login, senha, &funcionarios_cadastrado);
+                    
+                break;
 
-            isVerified = verificaLogin(login, senha, &funcionarios_cadastrado);
+                case 2:
+                    printf("\nCadastrando novo usuario!");
+                    //cadastroFunc();
+                break;
 
-            if (isVerified == 0){
-                printf("Login ou senha incorretos.\n");
-                printf("[1] Tentar novamente \n[2] Cadastrar novo usuario \n[0] Sair");
-                scanf("%d", &op);
+                case 3:
+                    printf("\n\nTchau!\n");
+                    //return 0;
+                break;
 
-                switch(op){
-                    case 1:
-                        system("cls");
-                        break;
-                    case 2:
-                        printf("Cadastrar novo usuario.\n");
-                        cadastroFunc();
-                        break;
-                    case 0:
-                        printf("Saindo.\n");
-                        isVerified = 1;
-                        break;
-                    default:
-                        printf("Opcao invalida.\n");
-                        break;
-                }
+                default:
+                    printf("\nOpcao invalida! Tente de novo!");
+                    Sleep(3000); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
+                break;
+            }
+        }while(op != 3 && isVerified == 0); 
+        // Só sai do loop se: Usuário sair (op == 3); ou Usuário for autenticado (isVerified == 1)
 
-            }else{
-                printf("Login realizado com sucesso.\n");
-                funcionarioLogado = funcionarios_cadastrado[0];
+        if(isVerified != 0){
+            printf("Login realizado com sucesso.\n");
+            funcionarioLogado = funcionarios_cadastrado[0];
+        }
 
-            };
 
-        }while (isVerified == 0);
-
-        isVerified = op == 0 ? 0 : 1; //Fala protugues seu alienigena
-
-        return isVerified;
 }
-
+        
 
 void cadastroFunc(){
 
@@ -82,3 +91,54 @@ void cadastroFunc(){
 }
 
 #endif
+
+
+//Código anterior do verificador de login:
+
+/*
+        do{
+                
+            printf("Informe o seu login: ");
+            scanf("%s", login);//O login não exige &, pois %s já o trata como ponteiro ~Vitor
+            printf("Informe a sua senha: ");
+            scanf("%d", &senha);
+            isVerified = verificaLogin(login, senha, &funcionarios_cadastrado);
+                
+
+            if (isVerified == 0){
+                printf("Login ou senha incorretos.\n");
+                printf("[1] Tentar novamente \n[2] Cadastrar novo usuario \n[0] Sair");
+                scanf("%d", &op);
+
+                switch(op){
+                    case 1:
+                        system("cls");
+                        break;
+                    case 2:
+                        printf("Cadastrar novo usuario.\n");
+                        cadastroFunc();
+                        break;
+                    case 0:
+                        printf("Saindo.\n");
+                        isVerified = 1;
+                        break;
+                    default:
+                        printf("Opcao invalida.\n");
+                        break;
+                }
+                    
+
+            }else{
+                printf("Login realizado com sucesso.\n");
+                funcionarioLogado = funcionarios_cadastrado[0];
+
+            };
+                
+
+        }while (isVerified == 0);
+        //;//
+
+        //isVerified = op == 0 ? 0 : 1; //Fala protugues seu alienigena
+
+        return isVerified;
+        */

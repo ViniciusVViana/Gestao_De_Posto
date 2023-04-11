@@ -17,8 +17,10 @@ int main(){
 
     int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0;
     Funcionarios funcionarioLogado;
+    
 
-    isVerified = login(funcionarioLogado);
+    isVerified = login(funcionarioLogado); 
+    //Autenticador de funcionários. Retorna 1 caso autenticado, e 0 se o usuário desejar fechar o programa.
 
 
     if (isVerified == 1){
