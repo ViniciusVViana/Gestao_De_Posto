@@ -39,7 +39,7 @@ int adicionar_estoque(){
     int busc, cont;
     float quant;
 
-    printf("Busque o item ao qual voce quer adicionar estoque pela identificacao (4 digitos).");
+    printf("=--= Busque o item ao qual voce quer adicionar estoque pela identificacao (4 digitos)\nR: ");
     scanf("%i", &busc);
     fflush(stdin);
 
@@ -47,20 +47,16 @@ int adicionar_estoque(){
 
         if(busc == produto_posto[cont].identificacao_produto){
 
-            printf("O quanto desse item voce quer adicionar: ");
+            printf("\n\n=-= O quanto desse item voce quer adicionar?\nR: ");
             scanf("%f", &quant);
             fflush(stdin);
 
             produto_posto[0].quantidade += quant;
 
             return 1;
-
         };
-
     };
-
     return 0;
-
 };
 
 //ESTA FUNÇÃO ADICIONA UM NOVO PRODUTO AO ESTOQUE
@@ -69,27 +65,27 @@ int novo_estoque(){
     size_stock += 1;
     produto_posto = (Produtos *)realloc(produto_posto, size_stock * sizeof(Produtos));
 
-    printf("Agora insira as informacoes do novo produto: /n");
+    printf("===---==---=== Cadastro de Novo Produto ===---==---===/n");
 
-    printf("Insira o nome do produto: ");
+    printf("\n=--= Insira o nome do produto (string):\nR: ");
     gets(produto_posto[size_stock - 1].nome);
     fflush(stdin);
-    printf("Insira o codigo de identificacao do produto:");
+    printf("\n=--= Insira o codigo de identificacao do produto (integer):\nR: ");
     scanf("%i", &produto_posto[size_stock - 1].identificacao_produto);
     fflush(stdin);
-    printf("Insira o tamanho do estoque do produto: ");
+    printf("\n=--= Insira o tamanho do estoque do produto (integer): \nR: ");
     scanf("%i", &produto_posto[size_stock - 1].quantidade);
     fflush(stdin);
-    printf("Insira o valor do produto: ");
+    printf("\n=--= Insira o valor do produto (float): \nR: ");
     scanf("%f", &produto_posto[size_stock - 1].preco);
     fflush(stdin);
-    printf("Insira o nome da catgoria que o produto se encaixa: ");
+    printf("\n=--= Insira o nome da catgoria que o produto se encaixa (string): \nR: ");
     gets(produto_posto[size_stock - 1].cat.nome_categoria);
     fflush(stdin);
-    printf("Insira a categoria pai do produto: ");
+    printf("\n=--= Insira a categoria pai do produto (integer): \nR: ");
     scanf("%i", &produto_posto[size_stock - 1].cat.identificacao_categoria_pai);
     fflush(stdin);
-    printf("insira a cattegoria do produto: ");
+    printf("\n=--= Insira a cattegoria do produto (integer): \nR: ");
     scanf("%i", &produto_posto[size_stock - 1].cat.identificacao_categoria);
     fflush(stdin);
 

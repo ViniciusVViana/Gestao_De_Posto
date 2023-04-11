@@ -12,26 +12,26 @@ int realizarVenda(int id_func)
     venda.produto = (Produtos *)malloc(1 * sizeof(Produtos));
     venda.id_func = id_func;
 
-    printf("=-=-=-=-=-=-=-=-=-= Menu de venda =-=-=-=-=-=-=-=-=-=\n");
+    printf("===---==---=== Menu de Vendas ===---==---===\n");
     do
     {
-        printf("Informe o codigo do produto: ");
+        printf("\n=--= Informe o codigo do produto: (integer)\nR: ");
         scanf("%d", &id_produto);
         produtoEncontrado = buscaProduto(id_produto, &produto);
 
         if (!produtoEncontrado)
         {
-            printf("Produto nao encontrado.\n");
+            printf("\n\n -=--=- Produto nao encontrado! -=--=- \n");
             sucesso = 0;
         }
         else
         {
-            printf("Informe a quantidade: ");
+            printf("\n\n=--= Informe a quantidade (integer):\nR: ");
             scanf("%d", &quantidade);
 
             if (quantidade > produto.quantidade)
             {
-                printf("Quantidade indisponivel.\n");
+                printf("\n\n-=--=- Quantidade indisponivel! -=--=-\n");
                 sucesso = 0;
             }
             else
@@ -45,41 +45,41 @@ int realizarVenda(int id_func)
 
                 //pos_venda(&produto);
 
-                printf("Venda realizada com sucesso.\n");
+                printf("\n\n=-==-= Venda realizada com sucesso! =-==-=\n");
                 cont++;
                 sucesso = 1;
             }
         }
-        printf("Desejam realizar outra venda? [1] - Sim [0] - Nao\n");
+        printf("\n\n=-=-= Deseja realizar outra venda? =-=-=\n[1] Sim\n[0] Nao\nR: ");
         scanf("%d", &op);
         if (op == 1)
         {
             venda.produto = (Produtos *)realloc(venda.produto, (cont + 1) * sizeof(Produtos));
         }
     } while (op != 0);
-    printf("Valor total: %.2f\n", venda.valor_total);
+    printf("\n\n=-==-= Valor total: %.2f\n =-==-=", venda.valor_total);
 
     do
     {
-        printf("Escolha a forma de pagamento: [1] - Dinheiro [2] - Cartao\n");
+        printf("\n\n=-=-= Escolha a forma de pagamento:\n[1] Dinheiro\n[2] Cartao\nR: ");
         scanf("%d", &op);
 
         switch (op)
         {
         case 1:
-            printf("Informe o valor recebido: ");
+            printf("\n\n=--= Informe o valor recebido:\nR: ");
             scanf("%f", &venda.valor_pago);
             venda.forma_pagamento = 1;
             if(venda.valor_pago < venda.valor_total)
 {
-                printf("Valor insuficiente.\n");
+                printf("\n-=- Valor insuficiente.\n");
                 vendaSucesso = 0;
 }
 
             else
                 {
                     venda.troco = venda.valor_pago - venda.valor_total;
-                    printf("Troco: %.2f\n", venda.troco);
+                    printf("\n=--= Troco: %.2f\n", venda.troco);
                     vendaSucesso = 1;
                 }
             
@@ -88,12 +88,12 @@ int realizarVenda(int id_func)
         case 2:
             do
             {
-                printf("Deseja Credito ou Débito? [1] - Credito [2] - Debito [3] - Cancelar \n");
+                printf("\n\n=-=-= Deseja Credito ou Débito?\n[1] Credito\n[2] Debito\n[3] Cancelar\nR: ");
                 scanf("%d", &opCard);
                 if (opCard == 1)
                 {
                     venda.forma_pagamento = 2;
-                    printf("A vista ou parcelado?\n [1] - A vista \n [2] - Parcelado \n [3] - Cancelar\n");
+                    printf("\n\n=--= A vista ou parcelado?\n[1] A vista \n[2] Parcelado\n[3] Cancelar\nR: ");
                     scanf("%d", &opCreditCard);
                     do
                     {
@@ -101,13 +101,13 @@ int realizarVenda(int id_func)
                         {
                             venda.valor_pago = venda.valor_total;
 
-                            printf("Valor pago: %.2f\n", venda.valor_pago);
+                            printf("\n\n=-= Valor pago: %.2f\n", venda.valor_pago);
                             vendaSucesso = 1;
                         }
                         else if (opCreditCard == 2)
                         {
                             int parcelas;
-                            printf("Informe o numero de parcelas (2%% de juros a cada parcela, apenas contado acima de 4 parcelas): "); //Na parte "2% de juros" o compilador tava achando que deveria ser inserido um numero decimal (% d -> %d), então eu troquei para %%, para ele printar apenas "%"
+                            printf("\n\n=--= Informe o numero de parcelas (2%% de juros a cada parcela, apenas contado acima de 4 parcelas):\nR: "); //Na parte "2% de juros" o compilador tava achando que deveria ser inserido um numero decimal (% d -> %d), então eu troquei para %%, para ele printar apenas "%"
                             scanf("%d", &parcelas);
                             if (parcelas > 4)
                             {
@@ -118,18 +118,18 @@ int realizarVenda(int id_func)
                             {
                                 venda.valor_pago = venda.valor_total;
                             }
-                            printf("Valor pago: %.2f\n", venda.valor_pago);
+                            printf("\n\n=-= Valor pago: %.2f\n", venda.valor_pago);
                             vendaSucesso = 1;
                         }
                         else if (opCreditCard == 3)
                         {
-                            printf("Operacao cancelada.\n");
+                            printf("\n\n -==- Operacao cancelada.\n");
                             vendaSucesso = 0;
                             break;
                         }
                         else
                         {
-                            printf("Opcao invalida.\n");
+                            printf("\n -==- Opcao invalida! -==-\n");
                         }
                     } while ((opCreditCard != 1 || opCreditCard != 2) && vendaSucesso == 0);
 
