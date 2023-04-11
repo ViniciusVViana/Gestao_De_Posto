@@ -59,9 +59,9 @@ int main(){
             case 4:
 
                 printf("Menu de estoque.\n");
-                printf("Selecione a opção desejada: ");
-                printf("1 - Adicionar item ao estoque.");
-                printf("2 - Adicionar novo item ao estoque.");
+                printf("Selecione a opção desejada: \n");
+                printf("1 - Adicionar item ao estoque.\n");
+                printf("2 - Adicionar novo item ao estoque.\n");
                 scanf("%i", &op);
                 fflush(stdin);
                 switch(op){
