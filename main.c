@@ -7,9 +7,6 @@
 #include"header_relatorios.h"
 
 
-
-
-
 int main(){
 
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));

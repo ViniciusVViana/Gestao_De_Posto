@@ -7,7 +7,7 @@ int login(Funcionarios funcionarioLogado){
         do{
 
             printf("Informe o seu login: ");
-            scanf("%s", &login);//Não e melhor usar o fgets(login)?
+            scanf("%s", login);//O login não exige &, pois %s já o trata como ponteiro ~Vitor
             printf("Informe a sua senha: ");
             scanf("%d", &senha);
 
@@ -43,7 +43,7 @@ int login(Funcionarios funcionarioLogado){
 
         }while (isVerified == 0);
 
-        isVerified = op == 0 ? 0 : 1;
+        isVerified = op == 0 ? 0 : 1; //Fala protugues seu alienigena
 
         return isVerified;
 }
@@ -55,25 +55,25 @@ void cadastroFunc(){
 
     printf("Cadastro de funcionarios.\n");
     printf("Informe o nome do funcionario: ");
-    scanf("%s", &funcionario.nome);
+    scanf("%s", funcionario.nome); //NOTA: funcionario.nome, por ser uma string, já é considerado como um ponteiro. Logo, não é necessario o '&' (Eu acho) (Para fins legais, me retenho de quaisquer problemas decorridos dessa alteração) ~Vitor
     printf("Informe o login do funcionario: ");
-    scanf("%s", &funcionario.login);
+    scanf("%s", funcionario.login);
     printf("Informe a senha do funcionario: ");
     scanf("%d", &funcionario.senha);
     printf("Informe o salario do funcionario: ");
     scanf("%f", &funcionario.salario);
     printf("Informe o CPF do funcionario: ");
-    scanf("%s", &funcionario.cpf);
+    scanf("%s", funcionario.cpf);
     printf("Informe o telefone do funcionario: ");
     scanf("%d", &funcionario.telefone);
     printf("Informe o endereco do funcionario: ");
-    scanf("%s", &funcionario.endereco.rua);
+    scanf("%s", funcionario.endereco.rua);
     printf("Informe o bairro do funcionario: ");
-    scanf("%s", &funcionario.endereco.bairro);
+    scanf("%s", funcionario.endereco.bairro);
     printf("Informe a cidade do funcionario: ");
-    scanf("%s", &funcionario.endereco.cidade);
+    scanf("%s", funcionario.endereco.cidade);
     printf("Informe o CEP do funcionario: ");
-    scanf("%s", &funcionario.endereco.cep);
+    scanf("%s", funcionario.endereco.cep);
     printf("Informe o numero de telefone do funcionario: ");//CREIO QUE SEJA PARA SER NUMERO DO ENDEREÇO DO FINCIONARIO
     scanf("%d", &funcionario.endereco.num);
 

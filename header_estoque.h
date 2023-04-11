@@ -47,7 +47,7 @@ int adicionar_estoque(){
         if(busc == produto_posto[cont].identificacao_produto){
 
             printf("O quanto desse item voce quer adicionar: ");
-            scanf("%lf", &quant);
+            scanf("%f", &quant);
             fflush(stdin);
 
             produto_posto[0].quantidade += quant;
@@ -77,7 +77,7 @@ int novo_estoque(){
     scanf("%i", &produto_posto[size_stock - 1].identificacao_produto);
     fflush(stdin);
     printf("Insira o tamanho do estoque do produto: ");
-    scanf("%lf", &produto_posto[size_stock - 1].quantidade);
+    scanf("%f", &produto_posto[size_stock - 1].quantidade);
     fflush(stdin);
     printf("Insira o valor do produto: ");
     scanf("%f", &produto_posto[size_stock - 1].preco);
