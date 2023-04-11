@@ -54,7 +54,7 @@ int login(Funcionarios funcionarioLogado){
             funcionarioLogado = funcionarios_cadastrado[0];
         }
 
-
+    return isVerified;
 }
         
 
@@ -74,7 +74,7 @@ void cadastroFunc(){
     printf("Informe o CPF do funcionario: ");
     scanf("%s", funcionario.cpf);
     printf("Informe o telefone do funcionario: ");
-    scanf("%d", &funcionario.telefone);
+    scanf("%ld", &funcionario.telefone); //Numero do telefone é do tipo long int, logo exige um %ld.
     printf("Informe o endereco do funcionario: ");
     scanf("%s", funcionario.endereco.rua);
     printf("Informe o bairro do funcionario: ");
