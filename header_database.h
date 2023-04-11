@@ -155,7 +155,8 @@ void inicializacao_funcionarios(){
     funcionarios_cadastrado[2].endereco.num = 345;
     strcpy(funcionarios_cadastrado[2].endereco.cep, "85829-210");
     strcpy(funcionarios_cadastrado[2].endereco.cidade, "Cascavel");
-    strcpy(funcionarios_cadastrado[2].endereco.bairro, "Centro");3    strcpy(funcionarios_cadastrado[2].endereco.rua, "penis");
+    strcpy(funcionarios_cadastrado[2].endereco.bairro, "Centro");
+    strcpy(funcionarios_cadastrado[2].endereco.rua, "penis");
     strcpy(funcionarios_cadastrado[2].cpf, "634.346.349-39");
     strcpy(funcionarios_cadastrado[2].nome, "Guilherme Augusto Deitos");
     strcpy(funcionarios_cadastrado[2].login, "deitos");
@@ -175,8 +176,8 @@ void inicializacao_funcionarios(){
     strcpy(funcionarios_cadastrado[3].login, "lider");
 
     //CADASTRO FUNCIONARIOS WEBERSON
-    funcionarios_cadastrado[4].senha = 555;
     funcionarios_cadastrado[4].identificacao_func = 5;
+    funcionarios_cadastrado[4].senha = 555;
     funcionarios_cadastrado[4].salario = 1250.00;
     funcionarios_cadastrado[4].telefone = 998258142;
     funcionarios_cadastrado[4].endereco.num = 764;
