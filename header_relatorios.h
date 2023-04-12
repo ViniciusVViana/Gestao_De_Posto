@@ -1,7 +1,74 @@
 //Aqui estarão todos as funções relacionadas à leitura e escrita de arquivos
 //4 tipos de relatórios: Relatório da venda atual, de produtos cadastrados, de todas as vendas já feitas e de funcionários cadastrados.
 
+
+//Abaixo vão umas constantes malucas que servem pra mexer nos arquivos
+const char* RELATORIO_GERAL_OUT = "(%d, %s, %f, %f, %f, %d, %d, %f)\n";
+
+
+
 //Commit numero 100
+int relatorioGeral(){
+    FILE *geral;
+    fopen_s(&geral, "RelatorioGeral.dat", "a+");
+        if(file==NULL){
+            return 1;
+        }
+        fprintf_s(file, RELATORIO_GERAL_OUT);
+
+
+    return 0;
+}
+
+void relatorioFunc(){
+
+
+}
+
+void relatorioProds(){
+
+
+}
+
+
+
+
+int relatorioMain(){
+    int op = 0;
+    do{
+        sleep(1500);
+        system("cls");
+        printf("\n\n===---==---=== Menu de relatorios ===---==---===");
+        printf("\n\n=--= Escolha uma opcao:\n");
+        printf("[1] Relatorio de todas as vendas ja feitas\n[2] Relatorio de Funcionarios\n[3] Relatorio de produtos cadastrados\n[4]Sair\nR: ");
+        scanf("%i", op);
+        switch(op){
+            case 1:
+                printf("\n\n=--= Relatorio gerado! Ele pode ser encontrado dentro do arquivo RelatorioGeral.dat!");
+            break;
+
+            case 2:
+                relatorioFunc();
+            break;
+
+            case 3:
+                relatorioProds();
+            break;
+
+            case 4:
+            printf("\n\n-=- Voltando...");
+            sleep(500);
+            break;
+
+            default:
+            printf("\n\n-=-=- Input invalido! -=-=-");
+            sleep(1000);
+        }
+
+    }while(op != 4);
+    return 0;
+}
+
 int relatorioMono(/*Provavelmente vai receber uma struct com os dados da venda como parâmetro*/){
 
     srand(time(NULL));

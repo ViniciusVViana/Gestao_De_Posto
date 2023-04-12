@@ -52,11 +52,11 @@ int main(){
                 realizarVenda(id_funcionario);
                 break;
             case 3:
-                printf("\n\n===---==---=== Menu de relatorios ===---==---===");
                 /*
                 Função de relatorios
                 Relatorios de funcionarios, vendas, estoque
                 */
+                relatorioMain();
                 break;
             case 4:
 
