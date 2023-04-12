@@ -90,7 +90,7 @@ int login(Funcionarios funcionarioLogado){
                     fflush(stdin);
                     isVerified = verificaLogin(login, senha);
                     if(isVerified == 0){
-                        printf("--=-- Login e/ou senha incorretos --=--");
+                        printf("\n--=-- Login e/ou senha incorretos --=--");
                     }
                     Sleep(900);
                 break;
@@ -113,7 +113,7 @@ int login(Funcionarios funcionarioLogado){
         // Só sai do loop se: Usuário sair (op == 3); ou Usuário for autenticado (isVerified == 1)
 
         if(isVerified != 0){
-            printf("=--===--= Login realizado com sucesso =--===--=\n");
+            printf("\n=--===--= Login realizado com sucesso =--===--=\n");
             funcionarioLogado = funcionarios_cadastrado[0];
         }
 
