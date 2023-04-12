@@ -27,6 +27,7 @@ int main(){
         do{
             op = 0;
             Sleep(1500);
+
             system("cls");
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");

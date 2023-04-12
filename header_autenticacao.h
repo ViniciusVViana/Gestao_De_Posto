@@ -16,7 +16,6 @@ int verificaLogin(char login[99], int senha){
 
 void cadastroFunc(){
 
-    Sleep(1500);
     system("cls");
     size_funcionario += 1;
     funcionarios_cadastrado = (Funcionarios *)realloc(funcionarios_cadastrado, size_funcionario * sizeof(Funcionarios));
@@ -59,7 +58,7 @@ void cadastroFunc(){
     fflush(stdin);
 
     printf("\n\n===---==---===Funcionario cadastrado com sucesso===---==---===\n");
-    //Sleep(1500);
+    Sleep(1500);
 }
 
 
@@ -71,7 +70,6 @@ int login(Funcionarios funcionarioLogado){
 
         do{
             op = 0;
-            Sleep(1500);
             system("cls");
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
@@ -94,7 +92,7 @@ int login(Funcionarios funcionarioLogado){
                     if(isVerified == 0){
                         printf("--=-- Login e/ou senha incorretos --=--");
                     }
-                    //Sleep(1500);
+                    Sleep(1500);
                 break;
 
                 case 2:
@@ -108,7 +106,7 @@ int login(Funcionarios funcionarioLogado){
 
                 default:
                     printf("\n-==---==- Opcao invalida! Tente de novo! -==---==-");
-                    //Sleep(1500); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
+                    Sleep(1500); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
                 break;
             }
         }while(op != 3 && isVerified == 0);
