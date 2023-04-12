@@ -92,7 +92,7 @@ int login(Funcionarios funcionarioLogado){
                     if(isVerified == 0){
                         printf("--=-- Login e/ou senha incorretos --=--");
                     }
-                    Sleep(1500);
+                    Sleep(900);
                 break;
 
                 case 2:
@@ -106,7 +106,7 @@ int login(Funcionarios funcionarioLogado){
 
                 default:
                     printf("\n-==---==- Opcao invalida! Tente de novo! -==---==-");
-                    Sleep(1500); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
+                    Sleep(900); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
                 break;
             }
         }while(op != 3 && isVerified == 0);

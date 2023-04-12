@@ -2,12 +2,12 @@
 #include"header_database.h"
 #include"header_estoque.h"
 #include"header_autenticacao.h"
-#include"header_vendas.h"
 #include"header_relatorios.h"
-
+#include"header_vendas.h"
 
 int main(){
 
+    srand(time(NULL));
     produto_posto = (Produtos *)malloc(size_stock * sizeof(Produtos));
     inicializacao_estoque();
 

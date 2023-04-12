@@ -3,7 +3,12 @@
 
 int realizarVenda(int id_func)
 {
-    int id_produto, produtoEncontrado = 0, quantidade, cont = 1, op, opCard, opCreditCard, sucesso = 0, produtosVendidos = 0;
+    char relatorio[20];
+    
+    int nvendidos = geradorBeloeMoral(relatorio);
+    
+
+    int id_produto, produtoEncontrado = 0, quantidade, pag, qtotal = 0, cont = 1, op, opCard, opCreditCard, sucesso = 0, produtosVendidos = 0;
     // Variaveis auxiliares para a venda
     Produtos produto;     // Variavel auxiliar para armazenar o produto caso encontrado
     int vendaSucesso = 0; // Variavel auxiliar para verificar se a venda foi realizada com sucesso
@@ -13,7 +18,7 @@ int realizarVenda(int id_func)
     venda.produto = (Produtos *)malloc(1 * sizeof(Produtos)); // Alocando memoria para o vetor de produtos da venda
     venda.id_func = id_func;                                  // Armazenando o id do funcionario que realizou a venda
 
-    printf("=-=-=-=-=-=-=-=-=-= Menu de venda =-=-=-=-=-=-=-=-=-=\n");
+    printf("=-=-=-=-=-=-=-=-=-= Menu de venda =-=-=-=-=-=-=-=-=-= \n");
     do
     {
         printf("Informe o codigo do produto: ");
@@ -47,11 +52,22 @@ int realizarVenda(int id_func)
                 cont++;
                 sucesso = 1;
                 produtosVendidos++;
+                qtotal = qtotal + venda.produto->quantidade;
                 descontar_estoque(produto.identificacao_produto, quantidade);
-
+                relatorioGeral(&venda, venda.produto->quantidade, venda.produto->identificacao_produto, nvendidos, venda.produto->nome);
+                
+                if (access(relatorio, F_OK) == 0) { //Checa se o arquivo existe
+                    // Ele existe
+                }else{
+                    // Nao existe, entao ele cria o cupom fiscal
+                    inicializaCupom(relatorio, &venda);
+                }
+                AppendCupom(relatorio, venda.produto->nome, venda.produto->quantidade, venda.produto->preco);
             }
         }
+        
         printf("Deseja continuar a venda? [1] - Sim [0] - Nao\n");
+        nvendidos = nvendidos + 1;//Para gerar relatorio
         scanf("%d", &op);
         if (op == 1)
         {
@@ -65,7 +81,7 @@ int realizarVenda(int id_func)
     {
         printf("Escolha a forma de pagamento: [1] - Dinheiro [2] - Cartao\n");
         scanf("%d", &op);
-
+        pag = op;
         switch (op) // Verificando a forma de pagamento
         {
         case 1: // Caso a forma de pagamento seja dinheiro
@@ -109,7 +125,9 @@ int realizarVenda(int id_func)
                         else if (opCreditCard == 2)
                         {
                             int parcelas;
-                            printf("Informe o numero de parcelas (2%% de juros a cada parcela, apenas contado acima de 4 parcelas): "); // Na parte "2% de juros" o compilador tava achando que deveria ser inserido um numero decimal (% d -> %d), então eu troquei para %%, para ele printar apenas "%"
+                            printf("Informe o numero de parcelas (2%% de juros a cada parcela, apenas contado acima de 4 parcelas): ");
+                            // Na parte "2% de juros" o compilador tava achando que deveria ser inserido um numero decimal (% d -> %d), então eu troquei para %%, para ele printar apenas "%"
+                            
                             scanf("%d", &parcelas);
 
                             if (parcelas > 4) // Verificando se o numero de parcelas eh maior que 4 para aplicar o juros
@@ -163,6 +181,9 @@ int realizarVenda(int id_func)
         }
     } while ((op != 1 || op != 2) && sucesso == 1 && vendaSucesso == 0);
 
+    
+    FinalizaCupom(relatorio, qtotal, venda.valor_pago, pag);
+    printf("\n=--= A nota fiscal esta no arquivo %s !", relatorio);
     free(venda.produto); // Liberando a memoria alocada para o vetor de produtos da venda
 
     system("pause");
