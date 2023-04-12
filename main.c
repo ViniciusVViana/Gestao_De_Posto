@@ -120,3 +120,4 @@ int main(){
     /* free(funcionarioLogado); */
     return 0; //O compilador exije que o retorno seja do tipo int
 };
+//The End
