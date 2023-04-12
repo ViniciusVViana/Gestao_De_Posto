@@ -108,4 +108,20 @@ void descontar_estoque(int id_produto, int quantidade){
 
 };
 
+int checar_estoque(int id_check){
+
+    int cont;
+
+    for(cont = 0; cont < size_stock; cont++){
+
+        if(id_check == produto_posto[cont].identificacao_produto){
+
+            return produto_posto[cont].quantidade;
+
+        };
+
+    };
+
+};
+
 #endif

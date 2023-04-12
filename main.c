@@ -14,7 +14,7 @@ int main(){
     funcionarios_cadastrado = (Funcionarios *)malloc(size_funcionario * sizeof(Funcionarios));
     inicializacao_funcionarios();//CHAMADA DA FUNÇÃO PARA INCIAR OS FUNCIONARIOS CADASTRADOS
 
-    int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0;
+    int op, isVerified, id_funcionario, adicionado = 0, novo_produto = 0, check, id_check;
     Funcionarios funcionarioLogado;
 
 
@@ -63,13 +63,22 @@ int main(){
 
                 printf("\n\n===---==---=== Menu de estoque ===---==---===\n");
                 printf("\n=--= Selecione a opcao desejada:\n");
-                printf("[1] Adicionar item ao estoque\n");
-                printf("[2] Adicionar novo item ao estoque\nR: ");
+                printf("[1] Checar estoque\n");
+                printf("[2] Adicionar item ao estoque\n");
+                printf("[3] Adicionar novo item ao estoque\nR: ");
                 scanf("%i", &op);
                 fflush(stdin);
                 switch(op){
-
                 case 1:
+
+                    printf("Qual o id sos produto voce quer checar?(4 digitos)\nR:");
+                    scanf("%i", &id_check);
+                    check = checar_estoque(id_check);
+                    printf("Tem no estoque %i Unidades/Litros do produto buscado\n", check);
+                    system("pause");
+
+                    break;
+                case 2:
                     adicionado = adicionar_estoque();
 
                     if(adicionado == 1){
@@ -83,7 +92,7 @@ int main(){
                     };
                     break;
 
-                case 2:
+                case 3:
                     novo_produto = novo_estoque();
 
                     if(novo_produto == 1){
