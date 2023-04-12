@@ -127,7 +127,7 @@ void AppendCupom(char *gera, char *nome, int quant, float preco){
         printf("\nErro inesperado! O arquivo nao pode ser criado :^( \n");
         Sleep(500);
     }
-    fprintf(inicial, "|%s\t%.2f \t\t%i\t%.2f\t|\n", nome, preco, quant, (preco * ((float)quant)));
+    fprintf(inicial, "|%.5s.\t\t%.2f\t\t%i\t%.2f\t|\n", nome, preco, quant, (preco * ((float)quant)));
     fclose(inicial);
 }
 
@@ -140,11 +140,11 @@ void FinalizaCupom(char *gera, int qtotal, float preco, int metodo){
         Sleep(500);
     }
     fprintf(inicial, "|-----------------------------------------------|\n");
-    fprintf(inicial, "| Qtd. Total:\t\t\t %i:\t|\n", qtotal);
-    fprintf(inicial, "| Preco Total:\t\t\t %.2f\t|\n", preco);
+    fprintf(inicial, "| Qtd. Total:\t\t\t %i\t\t|\n", qtotal);
+    fprintf(inicial, "| Preco Total:\t\t\t %.2f\t\t|\n", preco);
     fprintf(inicial, "|-----------------------------------------------|\n");
     fprintf(inicial, "|===============================================|\n");
-    fprintf(inicial, "|\tMetodo de Pagamento: %i \t \t|\n", metodo);
+    fprintf(inicial, "|\t\tMetodo de Pagamento: %i \t \t|\n", metodo);
     fprintf(inicial, "|__________Obrigado Pela PrEferencia!___________|\n");
     fclose(inicial);
 }
