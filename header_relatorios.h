@@ -15,7 +15,8 @@ int relatorioMono(/*Provavelmente vai receber uma struct com os dados da venda c
     strcat(filename, buffer);
     strcat(filename, ".txt");
     printf("\n%s", filename);
-    //Essa bagunça ilegível acima serve para criar um nome aleatório para o arquivo de relatório
+    //Essa bagunça ilegível acima serve para criar um nome aleatório para o arquivo de relatório.
+    //Dessa forma, os arquivos novos não vão deletar os antigos
 
     FILE *fprt;
     fprt = fopen(filename, "w");
