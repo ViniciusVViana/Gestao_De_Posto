@@ -60,7 +60,7 @@ int realizarVenda(int id_func)
                     // Ele existe
                 }else{
                     // Nao existe, entao ele cria o cupom fiscal
-                    inicializaCupom(relatorio, &venda);
+                    inicializaCupom(relatorio, &venda, id_func);
                 }
                 AppendCupom(relatorio, venda.produto->nome, venda.produto->quantidade, venda.produto->preco);
             }
@@ -182,7 +182,7 @@ int realizarVenda(int id_func)
     } while ((op != 1 || op != 2) && sucesso == 1 && vendaSucesso == 0);
 
     
-    FinalizaCupom(relatorio, qtotal, venda.valor_pago, pag);
+    FinalizaCupom(relatorio, qtotal, venda.valor_total, pag);
     printf("\n=--= A nota fiscal esta no arquivo %s !", relatorio);
     free(venda.produto); // Liberando a memoria alocada para o vetor de produtos da venda
 

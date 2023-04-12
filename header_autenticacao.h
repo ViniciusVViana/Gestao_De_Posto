@@ -83,6 +83,7 @@ int login(Funcionarios funcionarioLogado){
                     printf("\n-=- Login! -=-");
 
                     printf("\n=-= Informe o seu login: \nR: ");
+                    fflush(stdin);
                     scanf("%s", login);//login não exige &, pois %s já o trata como ponteiro
                     fflush(stdin);
                     printf("\n=-= Informe a sua senha: \nR: ");

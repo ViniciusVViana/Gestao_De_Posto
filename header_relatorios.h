@@ -41,11 +41,12 @@ void relatorioGeral(Vendas *v, int quant, int id, int n, char *nome){
 int relatorioMain(){
     int op = 0;
     do{
+        op = 0;
         Sleep(1500);
         system("cls");
         printf("\n\n===---==---=== Menu de relatorios ===---==---===");
         printf("\n\n=--= Escolha uma opcao:\n");
-        printf("[1] Relatorio de todas as vendas ja feitas\n[2] Relatorio de produtos cadastrados\n[3]Sair\nR: ");
+        printf("[1] Relatorio de todas as vendas ja feitas\n[x] EM BREVE\n[2]Sair\nR: ");
         scanf("%i", &op);
         switch(op){
             case 1:
@@ -53,10 +54,6 @@ int relatorioMain(){
             break;
 
             case 2:
-                //relatorioProds();
-            break;
-
-            case 3:
             printf("\n\n-=- Voltando...");
             Sleep(500);
             break;
@@ -66,7 +63,7 @@ int relatorioMain(){
             Sleep(1000);
         }
 
-    }while(op != 4);
+    }while(op != 2);
     return 0;
 }
 
@@ -88,7 +85,7 @@ int geradorBeloeMoral(char *gera){
     //... em 99.99% dos casos ...
 }
 
-void inicializaCupom(char *gera, Vendas *v){
+void inicializaCupom(char *gera, Vendas *v, int id){
 
     FILE *inicial = NULL;
     inicial = fopen(gera, "w+");
@@ -110,7 +107,7 @@ void inicializaCupom(char *gera, Vendas *v){
         fprintf(inicial, "|\t\t (45) 99985-2607\t\t|\n");
         fprintf(inicial, "|-----------------------------------------------|\n");
         fprintf(inicial, "| \tData e Hora: %s \t\t|\n", s);
-        fprintf(inicial, "|\t      Atendente: %i\t\t|\n", v->id_func);
+        fprintf(inicial, "|\t      Atendente: %i\t\t|\n", abs(id));
         fprintf(inicial, "|\t\t\t\t\t\t|\n");
         fprintf(inicial, "|\t      Relatorio da Venda:\t\t|\n");
         fprintf(inicial, "|-----------------------------------------------|\n");
@@ -144,7 +141,7 @@ void FinalizaCupom(char *gera, int qtotal, float preco, int metodo){
     fprintf(inicial, "| Preco Total:\t\t\t %.2f\t\t|\n", preco);
     fprintf(inicial, "|-----------------------------------------------|\n");
     fprintf(inicial, "|===============================================|\n");
-    fprintf(inicial, "|\t\tMetodo de Pagamento: %i \t \t|\n", metodo);
+    fprintf(inicial, "|\t     Metodo de Pagamento: %i \t \t|\n", metodo);
     fprintf(inicial, "|__________Obrigado Pela PrEferencia!___________|\n");
     fclose(inicial);
 }
