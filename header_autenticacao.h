@@ -114,11 +114,7 @@ int login(Funcionarios funcionarioLogado){
         }while(op != 3 && isVerified == 0);
         // Só sai do loop se: Usuário sair (op == 3); ou Usuário for autenticado (isVerified == 1)
 
-<<<<<<< HEAD
         if(isVerified != 0 && isVerified == 1){
-=======
-        if(isVerified != 0){
->>>>>>> cb949ccc0cce0450c8f709447377fab57f686942
             printf("\n=--===--= Login realizado com sucesso =--===--=\n");
             funcionarioLogado = funcionarios_cadastrado[0];
         }
