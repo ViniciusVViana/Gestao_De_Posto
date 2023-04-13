@@ -1,6 +1,12 @@
 #ifndef header_structs_h
 #define header_structs_h
 
+#ifdef WIN32
+#include <io.h>
+#define F_OK 0
+#define access _access
+#endif
+
 #include<assert.h>
 #include<windows.h>
 #include<stdio.h>

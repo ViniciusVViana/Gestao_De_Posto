@@ -1,7 +1,6 @@
 #ifndef header_database_h
 #define header_database_h
 
-//ESSA FUNÇÃO INICIALIZA O ESTOQUE COM OS PRODUTOS "BASES"
 void inicializacao_estoque(){
 
     strcpy(produto_posto[0].nome,"Gasolina comum");
@@ -126,7 +125,6 @@ void inicializacao_estoque(){
 
 };
 
-//ESSA FUNÇÃO INICIALIZA OS CADASTROS DOS FUNCIONARIOS
 void inicializacao_funcionarios(){
 
     //CADASTRO DO ADMIN

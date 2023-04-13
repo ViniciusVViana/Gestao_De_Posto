@@ -1,6 +1,6 @@
 .vscode/
-output/
-.exe
+*.exe
 Documentacao/
 .save
 .bak
+output/

@@ -74,7 +74,7 @@ int login(Funcionarios funcionarioLogado){
             printf("\n===================================================");
             printf("\n==-=---=-==Gestao de Posto ComeTofuWell!==-=---=-==");
             printf("\n===================================================\n");
-            printf("\n=--= Escolha uma opcao:\n[1] Fazer login\n[2] Cadastrar um novo usuario\n[3] Sair\nR: ");
+            printf("\n=--= Escolha uma opcao:\n[1] Fazer login\n[2] Sair\nR: ");
             scanf("%i", &op); //"op" de "opção"
             fflush(stdin);//Coloquei isso em tudo por segurança
 
@@ -83,6 +83,7 @@ int login(Funcionarios funcionarioLogado){
                     printf("\n-=- Login! -=-");
 
                     printf("\n=-= Informe o seu login: \nR: ");
+                    fflush(stdin);
                     scanf("%s", login);//login não exige &, pois %s já o trata como ponteiro
                     fflush(stdin);
                     printf("\n=-= Informe a sua senha: \nR: ");
@@ -90,30 +91,31 @@ int login(Funcionarios funcionarioLogado){
                     fflush(stdin);
                     isVerified = verificaLogin(login, senha);
                     if(isVerified == 0){
-                        printf("--=-- Login e/ou senha incorretos --=--");
+                        printf("\n--=-- Login e/ou senha incorretos --=--");
                     }
-                    Sleep(1500);
+                    Sleep(900);
                 break;
+
+                /* case 2:
+                    cadastroFunc();
+                break; */
 
                 case 2:
-                    cadastroFunc();
-                break;
-
-                case 3:
                     printf("\n\n-==---==- Tchau! -==---==-\n");
+                    isVerified = 3;
                     //return 0;
                 break;
 
                 default:
                     printf("\n-==---==- Opcao invalida! Tente de novo! -==---==-");
-                    Sleep(1500); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
+                    Sleep(900); //Dá um tempinho pra pessoa ler a mensagem, antes de reiniciar o programa
                 break;
             }
         }while(op != 3 && isVerified == 0);
         // Só sai do loop se: Usuário sair (op == 3); ou Usuário for autenticado (isVerified == 1)
 
-        if(isVerified != 0){
-            printf("=--===--= Login realizado com sucesso =--===--=\n");
+        if(isVerified != 0 && isVerified == 1){
+            printf("\n=--===--= Login realizado com sucesso =--===--=\n");
             funcionarioLogado = funcionarios_cadastrado[0];
         }
 
